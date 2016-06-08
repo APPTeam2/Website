@@ -17,7 +17,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
          <?php
          for($i=0;$i<10;$i++)
          {
-            $test = $Trucdeflo[$i];
+            $test = $Trucdeflo[$i]['nom'];
             echo $test;
          }
          ?>
