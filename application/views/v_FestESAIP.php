@@ -3,7 +3,7 @@
  			<section>
 			<div class="FestEsaip">
                 <h3 id="historique" class="droit">Historique</h3>
-			<p class="anonce"> Retrouvez la liste de nos précédent événements et les artistes qui y étaient présent.</p>
+			<p class="anonce"> Retrouvez la liste de nos précédents événements et les artistes qui y étaient présents.</p>
                 <table>
 				<tr>
 					<th>
@@ -45,7 +45,7 @@
 							 <li>Trivial</li>
 							 <li>Ca vas chauffer</li>
 							 <li>U1 retour aux sources</li>
-							 <li>Booba</li>
+                             <li><s>Booba</s></li>
 							 <li>Edith Piaf (holographique)</li>
 							 </ul>
 					</th>
@@ -69,9 +69,3 @@
                 <p class="espace">Nous contacter : <a href="mailto:FestESAIP.contact@esaip.org">FestESAIP.contact@esaip.org</a> </p>
                 </div>
             </section>
-
-</div><!-- fin de la div container -->
-
-
-</body>
-</html>

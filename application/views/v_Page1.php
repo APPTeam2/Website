@@ -19,7 +19,3 @@
             ?>
             <a href="<?php echo site_url(); ?>forum/accueil">accueil</a>
             <p />
-
-        </body>
-
-</head>
