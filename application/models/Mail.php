@@ -1,4 +1,11 @@
 <?php 
+defined('BASEPATH') OR exit('No direct script access allowed');
+/** -
+ * 
+ * @author Antoine GUILLOT
+ * @date 08/06/16
+ * @version 1
+ */
 
 Class Mail extends CI_Model
 {

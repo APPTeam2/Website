@@ -1,3 +1,5 @@
+
+
 /*Partie Nathan*/
 @font-face {
     font-family: 'nirvana_font';
@@ -26,7 +28,12 @@
 }
 /*Fin Nathan*/
 
-
+/** -
+ * 
+ * @author Antoine GUILLOT
+ * @date 08/06/16
+ * @version 1
+ */
 body
 {
 	min-width: 500px;
@@ -198,7 +205,9 @@ a, a:active
 	    padding: 0% 0% 0% 0%;
 	}
 
-		/* Nathan*/
+		/* 
+		Fin Antoine GUILLOT
+		Nathan*/
 	section aside
 	{	
 		margin: 1.5% 0% 0% 0%;
@@ -361,6 +370,13 @@ a, a:active
 
 }
 
+/** -
+ * 
+ * @author Antoine GUILLOT
+ * @date 08/06/16
+ * @version 1
+ */
+
 @media screen and (max-width: 1025px)
 {
         body
@@ -426,7 +442,9 @@ a, a:active
 	    padding: 0% 0% 0% 0%;
 	}
 	
-		/* Nathan*/
+		/* 
+		Fin Antoine GUILLOT
+		Nathan*/
 	section aside
 	{	
 		margin: 1.5% 3% 0% 3%;
