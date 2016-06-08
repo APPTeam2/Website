@@ -27,5 +27,9 @@ class Historique extends CI_Controller
 	        $this->load->view('v_FestESAIP', $data);
 	        $this->load->view('v_footer');
             
+            $data['Trucdeflo']=$tableau; 
+            $this->load->view('v_FestESAIP', $data);
+            
+	        $this->load->view('v_footer');            
         }
 }
