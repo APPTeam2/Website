@@ -40,7 +40,7 @@
 						<li>Infos pratiques
 							<ul>
 								<li>Camping</li>
-								<li>Accessibilité</li>
+								<li><?php echo anchor($uri = $url_base."Infos/c1#access", $title = 'Accessibilité', $attributes = 'access')?></li>
 								<li>Venir au Fest'Esaip</li>
 							</ul>
 						</li>

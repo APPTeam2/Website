@@ -1,9 +1,9 @@
 <?php
-/** Pied de page commun à l'ensemble du site
+/** A CHANGER
  * 
- * @author Adrien Pironneau
- * @date 03/06/2016
- * @version 0.2
+ * @author A CHANGER
+ * @date A CHANGER
+ * @version A CHANGER
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
