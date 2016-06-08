@@ -1,3 +1,15 @@
+<?php
+/** -
+ * 
+ * @author Antoine GUILLOT
+ * @date 01/06/2016
+ * @version 1
+ */
+defined('BASEPATH') OR exit('No direct script access allowed');
+?>
+
+
+
 <!DOCTYPE html>
 <!-- commentaire -->
 <html>
