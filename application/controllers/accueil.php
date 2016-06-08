@@ -26,7 +26,6 @@ class Accueil extends CI_Controller {
                     }
                     else
                     {
-                        //echo $sess_array['actif'];
                         redirect('accueil/confirmation1', 'refresh'); 
                     }
                 }
