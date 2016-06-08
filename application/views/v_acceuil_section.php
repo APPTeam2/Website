@@ -1,9 +1,9 @@
 <?php
-/** Pied de page commun à l'ensemble du site
+/** A CHANGER
  * 
- * @author Adrien Pironneau
- * @date 03/06/2016
- * @version 0.2
+ * @author A CHANGER
+ * @date A CHANGER
+ * @version A CHANGER
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
@@ -46,7 +46,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 
-					<img class="small_image" src="<?php echo($url_base.'/assets/img/images/sponsors/sopalin.png')?>" "alt="Sopalin"/>
+					<img class="small_image" src="<?php echo($url_base.'/assets/img/images/sponsors/sopalin.png')?>" alt="Sopalin"/>
 					<img class="small_image" src="<?php echo($url_base.'/assets/img/images/sponsors/carglass.png')?>" alt="Carglass"/>
 					<img class="small_image" src="<?php echo($url_base.'/assets/img/images/sponsors/justinbridou.png')?>" alt="Justin Bridou"/>
 					<img class="small_image" src="<?php echo($url_base.'/assets/img/images/sponsors/lapotagere.png')?>" alt="La Potagère"/>
@@ -58,8 +58,3 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				</figure>
 			</aside>
 		</section>
-</div><!-- fin de la div container -->
-
-
-</body>
-</html>

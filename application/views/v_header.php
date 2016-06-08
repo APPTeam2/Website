@@ -23,8 +23,8 @@
 
 						<li>Fest'Esaip
 							<ul>
-								<li><?php echo anchor($uri = $url_base."/Historique/c1#historique", $title = 'historique', $attributes = 'contact')?>
-								<li><?php echo anchor($uri = $url_base."/Historique/c1#contact", $title = 'Equipes / Contact', $attributes = 'contact')?></li>
+								<li><?php echo anchor($uri = $url_base."Historique/c1#historique", $title = 'historique', $attributes = 'contact')?>
+								<li><?php echo anchor($uri = $url_base."Historique/c1#contact", $title = 'Equipes / Contact', $attributes = 'contact')?></li>
 								<li>Sponsors</li>
 							</ul>
 						</li>
@@ -40,7 +40,7 @@
 						<li>Infos pratiques
 							<ul>
 								<li>Camping</li>
-								<li>Accessibilité</li>
+								<li><?php echo anchor($uri = $url_base."Infos/c1#access", $title = 'Accessibilité', $attributes = 'access')?></li>
 								<li>Venir au Fest'Esaip</li>
 							</ul>
 						</li>
@@ -65,17 +65,8 @@
                                         <input type="submit" value="Login" />
                                     </fieldset>
                                 </form>
-                            </ul>                                                     
+                            </ol>                                                     
 						</li>
 					</ul>
 				</div>
 			</nav>
-
-
-
-
-
-
-
-	</body>
-</html>
