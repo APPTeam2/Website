@@ -11,7 +11,7 @@ Class User extends CI_Model
 {
  function login($username, $password)
  {
-   $requete = "select IDuser, login from utilisateur WHERE login='".$username."' and password='".MD5($password)."'";
+   $requete = "select IDuser, login, actif from utilisateur WHERE login='".$username."' and password='".MD5($password)."'";
    $result = $this->db->query($requete);
    
    if($result -> num_rows() == 1)
