@@ -23,9 +23,16 @@ class Historique extends CI_Controller
                 }
                 
             $data['url_base'] = base_url();
-            $this->load->view('v_header', $data);
-	        $this->load->view('v_FestESAIP', $data);
-	        $this->load->view('v_footer');
+            $this->load->view('v_header', $data);                    
+            $this->load->model('M_historique');
+            $result = $this->M_historique->historique();
+            $tableau=array();
+            $i=0;
+              foreach($result as $row)
+            {
+                $tableau[$i] = array('nom' => $row->nom);
+                $i++;
+            }
             
             $data['Trucdeflo']=$tableau; 
             $this->load->view('v_FestESAIP', $data);
