@@ -28,9 +28,15 @@ class Historique extends CI_Controller
             $result = $this->M_historique->historique();
             $tableau=array();
             $i=0;
+            
               foreach($result as $row)
             {
-                $tableau[$i] = array('nom' => $row->nom);
+                   $tableau[$i][0]=>$row->theme);
+                 /* foreach($result.)
+                  {
+                    $tableau[$i] = array('nom' => $row->nom);
+                  }*/
+                //$tableau[$i] = array('nom' => $row->nom);
                 $i++;
             }
             $data['Trucdeflo']=$tableau; 

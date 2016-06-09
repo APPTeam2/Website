@@ -25,7 +25,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                             foreach ($Trucdeflo as $array) {
                                 echo "<li class='espace'>";
-                                echo $array['nom'];
+                                echo $array[0][0];
                                 echo "</li>";
                             }
                         }
