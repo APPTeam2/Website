@@ -33,7 +33,6 @@ class Historique extends CI_Controller
                 $tableau[$i] = array('nom' => $row->nom);
                 $i++;
             }
-            
             $data['Trucdeflo']=$tableau; 
             $this->load->view('v_FestESAIP', $data);
             

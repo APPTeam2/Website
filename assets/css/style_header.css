@@ -354,7 +354,7 @@ a, a:active
 
 	.espace{
 		font-size :130%;
-		margin: 1em 0;
+		margin: 10px 0;
 		list-style-position: inside;
 		text-align: center;
 	}
@@ -567,6 +567,43 @@ a, a:active
 	{
 		width: calc(100% - 130px); /*Merci Antoine pour les pixels. Pensez au 'calc'!*/
 	}
+     /** START Fest'ESAIP PART 
+ * @author Florian Levenez-Delafontaine
+ * @date 09/06/2016
+*/   
+ table 
+	{ 
+		margin: auto;
+	    border-collapse: collapse;
+		width: 100%
+	}
+	
+	th{
+		 border-top : 1px solid;	
+		 border-bottom :  1px solid;
+	}
+	
+	tr:hover{background-color:rgba(0, 0, 0, 0.5)}
+	
+	.anonce
+	{
+		text-align: center;
+		font-size :150%;
+		font-style: bold;
+		color : #009900;
+	}
+	/*  Prend trop de place pour rien en version mobile.
+        .espace{
+		font-size :130%;
+		margin: 10px 0;
+		list-style-position: inside;
+		text-align: center;
+	}
+*/
+	.FestEsaip
+	{
+		color:white;
+	}           
 }
 
 /** START FOOTER PART 

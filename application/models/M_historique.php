@@ -9,7 +9,7 @@ Class M_historique extends CI_Model
 {
 function historique()
 {
-$requete = "Select * FROM artiste";
+$requete = "Select nom FROM artiste";
 $query = $this->db->query($requete);
 return $query->result();
 }

@@ -13,15 +13,28 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <div class="FestEsaip">
         <h3 id="historique" class="droit">Historique</h3>
         <p class="anonce"> Retrouvez la liste de nos précédents événements et les artistes qui y étaient présents.</p>
-        
-         <?php
-         for($i=0;$i<10;$i++)
-         {
-            $test = $Trucdeflo[$i]['nom'];
-            echo $test;
-         }
-         ?>
-        
+
+        <table>
+            <tr>
+                <th>
+                    Fest'esaip 2012
+                </th>
+                <th>
+                    <ul>
+                        <?php {
+
+                            foreach ($Trucdeflo as $array) {
+                                echo "<li class='espace'>";
+                                echo $array['nom'];
+                                echo "</li>";
+                            }
+                        }
+                        ?>
+                    </ul>
+                </th>
+            </tr>
+        </table>
+
         <!-- bacjup
         <table>
             <tr>
