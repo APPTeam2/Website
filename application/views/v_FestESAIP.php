@@ -1,9 +1,9 @@
 <?php
 /** A CHANGER
  * 
- * @author A CHANGER
- * @date A CHANGER
- * @version A CHANGER
+ * @author Florian Levenez-Delafontaine
+ * @date A 09/06/2016
+ * @version 1.2
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
@@ -15,7 +15,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <p class="anonce"> Retrouvez la liste de nos précédents événements et les artistes qui y étaient présents.</p>
 
         <table>
-            <tr>
+            <t
                 <th>
                     Fest'esaip 2012
                 </th>
@@ -35,7 +35,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </tr>
         </table>
 
-        <!-- bacjup
+        <!-- backup
         <table>
             <tr>
                 <th>
