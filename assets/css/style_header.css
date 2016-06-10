@@ -574,7 +574,7 @@ a, a:active
 /** START FOOTER PART 
  * @author Adrien Pironneau
  * @date 08/06/2016
- * @version 0.2
+ * @rev 03
 */
 footer
 {
@@ -585,6 +585,7 @@ footer
     background-color: rgba(0, 0, 0, 0.7);
     color: grey;
     display: table;
+    font-size: 0.938em;
     font-family: 'Segoe UI', 'Segoe WP', Tahoma, Arial, sans-serif;
     
 }
@@ -612,23 +613,117 @@ li
    padding-left: 1.5%;
 }
 
+#footer-widget-right
+{
+   padding-right: 1.5%;
+}
+
 .footer-widget-text
 {
-    padding: 0 !important;
+    padding: 0;
     display: table-cell;
     min-width: 50% !important;
-    line-height: 16px;
+    width: 50% !important; /* HACK pour Google Chrome */
+    line-height: 100%;
 }
 
 .footer-title
 {
     text-transform: uppercase;
-    padding: 0 0 0 5px;
+    padding: 0 0 0 1%;
     font-weight: bold;
 }
 
 .footer-body
 {
-    padding: 10px;
+    padding: 5%;
+}
+
+
+@media screen and (max-width: 1025px)
+{
+
+    footer
+{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top : 2%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: grey;
+    display: table;
+    font-size: 0.938em;
+    font-family: 'Segoe UI', 'Segoe WP', Tahoma, Arial, sans-serif;
+    
+}
+
+li
+{
+    list-style-type:none;
+}
+
+.footer-row
+{
+    display: table-row;
+}
+
+.footer-widget
+{
+    padding: 1% 0 1% 0;
+    display: table-cell;
+    max-width: 18%
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 1);
+}
+
+#footer-widget-left
+{
+   padding-left: 1.5%;
+}
+
+#footer-widget-right
+{
+   padding-right: 1.5%;
+}
+
+.footer-widget-text
+{
+    padding: 1%;
+    line-height: 100%;
+}
+
+.footer-title
+{
+    text-transform: uppercase;
+    padding: 0 0 0 2%;
+    font-weight: bold;
+}
+
+.footer-body
+{
+    padding: 5%;
+}
+    
 }
 /* END FOOTER PART */
+
+
+/** START ACCESS PART 
+ * @author Adrien PIRONNEAU
+ * @date 08/06/2016
+ * @version 0.2
+*/
+
+section article
+   {
+    color: white;
+    font-size: 100%;
+    margin: 1.5% 0% 0% 0%;
+	padding: 2%;
+	height: auto;
+	background-color: rgba(0, 0, 0, 0.7);
+    font-size: 0.930em;
+    font-family: 'Segoe UI', 'Segoe WP', Tahoma, Arial, sans-serif;
+   }
+   
+
+/* END ACCESS PART */

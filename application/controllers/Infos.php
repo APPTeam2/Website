@@ -1,8 +1,8 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-/** Pages Infos Pratiques
+/** Contrôleur Infos Pratiques
  * 
- * @author Adrien Pironneau
+ * @author Adrien PIRONNEAU
  * @source Antoine GUILLOT
  * @date 08/06/2016
  * @rev 01
