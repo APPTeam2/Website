@@ -15,21 +15,34 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <p class="anonce"> Retrouvez la liste de nos précédents événements et les artistes qui y étaient présents.</p>
 
         <table>
-             <?php 
-                foreach ($Trucdeflo as $array) {
-                                echo "<tr>";
-                                echo "<th>";
-                                echo $array[0][0];
-                                echo "</th>";
-                                echo "<th>";
-                                echo "</th>";
-                                echo "</tr>";
+            <?php
+            /*
+             On récupère l'historique des festivals.
+             la première ligne etant vide on comence directement à la ligne 2.
+             */
+            $length = count($T_historique);
+            for ($i = 1; $i < $length; $i++) {
+                echo "<tr>";
+                    echo "<th>";
+                        echo $T_historique[$i][0];
+                    echo "</th>";
+                    echo "<th>";
+                        echo "<ul class='espace'>";
+                        $length2 = count($T_historique[$i]);
+                            for ($j = 1; $j < $length2; $j++) {
+                                echo "<li>";
+                                echo $T_historique[$i][$j];
+                                echo "</li>";
                             }
+                        echo "</ul>";
+                    echo "</th>";
+                echo "</tr>";
+            }
             ?>
         </table>
-        
-        
-        
+
+
+
 
 
         <!-- backup

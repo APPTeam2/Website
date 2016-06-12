@@ -34,16 +34,16 @@ class Historique extends CI_Controller
             
               foreach($result as $row)
             {
-                   $tempo = array($row->theme);
+                   $tempo = $row->theme;
                    if($tempo != $tableau[$i][0]){
                     $i++;
                     $tableau[$i][0]=$tempo;
                     $j=1;
                     }
-                    $tableau[$i][$j]=array($row->nomArtiste);
+                    $tableau[$i][$j]= $row->nomArtiste;
                     $j++;
             }
-            $data['Trucdeflo']=$tableau; 
+            $data['T_historique']=$tableau; 
             $this->load->view('v_FestESAIP', $data);
             
 	        $this->load->view('v_footer');            
