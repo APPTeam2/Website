@@ -1,7 +1,7 @@
 <?php
 /** Pied de page commun à l'ensemble du site
  * 
- * @author Adrien Pironneau
+ * @author Adrien PIRONNEAU
  * @date 08/06/2016
  * @rev 03
  */
@@ -45,7 +45,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <li>Venir au Fest'Esaip</li>
         </div>
     </div>
-    <div class="footer-widget footer-widget-text">
+    <div class="footer-widget footer-widget-text" id="footer-widget-right">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non elit ligula. Vivamus et elit tincidunt, laoreet tellus ut, semper quam. Sed risus nibh, blandit eget placerat in, euismod at nisi.<br><br>
         Page rendered in <strong>{elapsed_time}</strong> seconds.<br>
         <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?>
