@@ -2,9 +2,9 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 /** -
  * 
- * @author Antoine GUILLOT
+ * @authors Antoine GUILLOT,Florian Levenez-Delafontaine
  * @date 08/06/16
- * @version 1
+ * @version 1.2
  */
 
 class Historique extends CI_Controller
@@ -23,9 +23,29 @@ class Historique extends CI_Controller
                 }
                 
             $data['url_base'] = base_url();
-            $this->load->view('v_header', $data);
-	        $this->load->view('v_FestESAIP', $data);
-	        $this->load->view('v_footer');
+            $this->load->view('v_header', $data);                    
+            $this->load->model('M_historique');
+            $result = $this->M_historique->historique();
+            $tableau=array();
+            $tableau[0][0]=NULL;
+            $tempo=NULL;
+            $i=0;
+            $j=1;
             
+              foreach($result as $row)
+            {
+                   $tempo = $row->theme;
+                   if($tempo != $tableau[$i][0]){
+                    $i++;
+                    $tableau[$i][0]=$tempo;
+                    $j=1;
+                    }
+                    $tableau[$i][$j]= $row->nomArtiste;
+                    $j++;
+            }
+            $data['T_historique']=$tableau; 
+            $this->load->view('v_FestESAIP', $data);
+            
+	        $this->load->view('v_footer');            
         }
 }
