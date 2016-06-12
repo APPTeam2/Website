@@ -14,10 +14,13 @@ Class M_historique extends CI_Model {
                             DISTINCT festival.theme, artiste.nomArtiste 
                     FROM 
                             festival 
-                                    INNER JOIN CONCERT  
+                                    INNER JOIN CONCERT 
                                             ON CONCERT.idfestival=festival.idFestival 
-                                    INNER JOIN artiste 
-                                            ON artiste.idArtiste=CONCERT.idArtiste";
+                                    INNER JOIN jouer
+                                            ON concert.idConcert=jouer.idConcert 
+                                    INNER JOIN artiste
+                                            ON jouer.idArtiste=artiste.idArtiste 
+                    ORDER BY `festival`.`theme` ASC";
 
 
         $query = $this->db->query($requete);

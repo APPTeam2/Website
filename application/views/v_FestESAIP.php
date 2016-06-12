@@ -15,25 +15,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <p class="anonce"> Retrouvez la liste de nos précédents événements et les artistes qui y étaient présents.</p>
 
         <table>
-            <t
-                <th>
-                    Fest'esaip 2012
-                </th>
-                <th>
-                    <ul>
-                        <?php {
-
-                            foreach ($Trucdeflo as $array) {
-                                echo "<li class='espace'>";
+            <tr>
+             <?php 
+            
+                foreach ($Trucdeflo as $array) {
+                                echo "<th>";
                                 echo $array[0][0];
-                                echo "</li>";
+                                echo "</th>";
                             }
-                        }
-                        ?>
-                    </ul>
-                </th>
-            </tr>
+              echo "</tr>";
+              echo "<tr>";
+                echo "<th>bonjour</th>";
+                
+             echo "</tr>";
+            ?>
         </table>
+        
+        
+        
+
 
         <!-- backup
         <table>
