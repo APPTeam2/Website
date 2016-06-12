@@ -15,19 +15,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <p class="anonce"> Retrouvez la liste de nos précédents événements et les artistes qui y étaient présents.</p>
 
         <table>
-            <tr>
              <?php 
-            
                 foreach ($Trucdeflo as $array) {
+                                echo "<tr>";
                                 echo "<th>";
                                 echo $array[0][0];
                                 echo "</th>";
+                                echo "<th>";
+                                echo "</th>";
+                                echo "</tr>";
                             }
-              echo "</tr>";
-              echo "<tr>";
-                echo "<th>bonjour</th>";
-                
-             echo "</tr>";
             ?>
         </table>
         
