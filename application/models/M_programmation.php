@@ -7,20 +7,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * and open the template in the editor.
  */
 
-Class M_historique extends CI_Model {
+Class M_programmation extends CI_Model {
 
-    function historique() {
+    function concerts() {
         $requete = "SELECT 
-                            DISTINCT festival.theme, artiste.nomArtiste 
+                            DISTINCT artiste.nomArtiste, DATE_FORMAT(concert.dateConcert, '%d/%m/%Y') AS `dateConcert`, concert.heureDebut 
                     FROM 
                             festival 
                                     INNER JOIN CONCERT 
-                                            ON CONCERT.idfestival=festival.idFestival 
+                                            ON concert.idFestival=festival.idFestival 
                                     INNER JOIN jouer
                                             ON concert.idConcert=jouer.idConcert 
                                     INNER JOIN artiste
                                             ON jouer.idArtiste=artiste.idArtiste 
-                    ORDER BY `festival`.`theme` DESC";
+                    WHERE festival.dateDebut=(SELECT MAX(festival.dateDebut) FROM festival)
+                    ORDER BY `concert`.`dateConcert` ASC, `concert`.`heureDebut` ASC";
 
 
         $query = $this->db->query($requete);
