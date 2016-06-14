@@ -10,6 +10,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Infos extends CI_Controller
 {      
+        public function c1()
+        {
+            $sess_array=$this->session->userdata('logged_in');
+            $data = array();
+            
             $this->load->model('login');
             $data['log_or_not'] = $this->login->login1();
                 
