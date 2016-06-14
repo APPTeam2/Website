@@ -45,10 +45,10 @@ class Accueil extends CI_Controller {
 	}
         public function login()
 	{
-                $this->load->model('user');
+                $this->load->model('login');
                 $username = htmlspecialchars($_POST['login']);
                 $password = htmlspecialchars($_POST['pass']);
-                $result = $this->user->login($username, $password);
+                $result = $this->login->login2($username, $password);
                 
                 if($result)
                     {
@@ -95,56 +95,30 @@ class Accueil extends CI_Controller {
             $mail=$info['mail'];
             //echo $mail;
 
-
-            $config = Array
-            (
-              'protocol' => 'smtp',
-              'smtp_host' => 'ssl://smtp.googlemail.com',
-              'smtp_port' => 465,
-              'smtp_user' => 'finlandblogproject@gmail.com', // change it to yours
-              'smtp_pass' => 'finland2016', // change it to yours
-              'mailtype' => 'html',
-              'charset' => 'iso-8859-1',
-              'wordwrap' => TRUE
-            );
-
             $code_confirmation=rand ();
+            $subject='Code de confirmation FestEsaip';
+            $message="Votre code : ".$code_confirmation;
+
+            
+
+            $this->load->model('envoyer_mail');
+            $result = $this->envoyer_mail->envoyer($mail, $subject, $message);
 
 
-             $message = '';
-            $this->load->library('email', $config);
-            $this->email->set_newline("\r\n");
-            $this->email->set_newline("\r\n");
-            $this->email->from('finlandblogproject@gmail.com'); // change it to yours
-            $this->email->to($mail);// change it to yours
-            $this->email->subject('Code de confirmation FestEsaip');
-            $this->email->message("Votre code :".$code_confirmation);  
-
-            if($this->email->send())
+            if($result==TRUE)
              {
                 $this->session->set_userdata('code_confirmation', $code_confirmation);
                 redirect('accueil/confirmation2', 'refresh');  
              }
-             else
-            {
-             //show_error($this->email->print_debugger());
-            echo "Erreur, veuillez contacter l'administrateur :(" ;
-            }
             
         }
 
         public function confirmation2()
         {
-            $sess_array=$this->session->userdata('logged_in');
             $data = array();
-            if($sess_array['username']!=NULL)
-            {
-                $data['log_or_not']='<a href="'.  base_url() .'accueil/logout">Se déconnecter</a></li>';
-            }
-            else 
-            {
-                $data['log_or_not']='Se connecter';
-            }
+            $this->load->model('login');
+            $data['log_or_not'] = $this->login->login1();
+
             $data['url_base'] = base_url();
             $this->load->view('v_header', $data);
             $this->load->view('v_confirmation');
@@ -171,6 +145,86 @@ class Accueil extends CI_Controller {
             $this->session->set_userdata('logged_in', $sess_array);
 
             redirect('', 'refresh');  
+        }
+
+        public function renvoyer_pass1()
+        {
+            $data = array();
+            $this->load->model('login');
+            $data['log_or_not'] = $this->login->login1();
+
+            $data['url_base'] = base_url();
+            $this->load->view('v_header', $data);
+            $this->load->view('v_envoyer_mdp');
+            $this->load->view('v_footer');
+        }
+
+
+        public function renvoyer_pass2()
+        {
+
+            $mail = htmlspecialchars($_POST['mail']);
+
+            $this->load->model('mail');
+            $result = $this->mail->verif_mail($mail);
+
+            if ($result==1)
+            {                
+                $this->load->model('confirmation_mail');
+                $result = $this->confirmation_mail->non_confirmation($mail);
+
+                if($result==TRUE)
+                {
+                    $mdp=rand ();
+                    $mdp=$mdp.rand ();                  
+
+                    $subject='Votre mot de passe FestEsaip';
+                    $message="Votre mdp : ".$mdp;
+
+
+                    $this->load->model('envoyer_mail');
+                    $result = $this->envoyer_mail->envoyer($mail, $subject, $message);
+
+                    if($result==TRUE)
+                    {
+                        $this->load->model('login');
+                        $this->login->modifier_pass($mdp, $mail);
+                        echo "Nouveau mot de passe envoyé :) <br />" ;
+                        echo ('<a href="'.base_url().'">Retourner à la page : accueil</a>'); 
+                    }
+
+                    else
+                    {
+                        echo "Erreur, nous ne pouvons envoyer de mail en ce moment :( <br />" ;
+                        echo ('<a href="'.base_url().'">Retourner à la page : accueil</a>'); 
+                    }
+                }
+
+                else
+                {
+                    echo "Erreur, nous ne pouvons accéder à la BDD en ce momement :( <br />" ;
+                    echo ('<a href="'.base_url().'">Retourner à la page : accueil</a>'); 
+                }
+
+            }
+
+            else
+            {
+                if($result==0)
+                {
+                    echo "Erreur, un nouveau mot de passe a déjà été envoyé :( <br />" ;
+                    echo ('<a href="'.base_url().'">Retourner à la page : accueil</a>');
+                    
+                }
+                else
+                {
+                    echo "Erreur, adresse mail inconnue :( <br />" ;
+                    echo ('<a href="'.base_url().'">Retourner à la page : accueil</a>');
+                }
+                
+
+            }
+            
         }
 
 }

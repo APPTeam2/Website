@@ -27,7 +27,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			</h1>
 		</header>
 
-		<script   src="http://code.jquery.com/jquery-3.0.0.js"   integrity="sha256-jrPLZ+8vDxt2FnE1zvZXCkCcebI/C8Dt5xyaQBjxQIo="   crossorigin="anonymous"></script>
+		<script   src="http://code.jquery.com/jquery-3.0.0.js"   integrity="sha256-jrPLZ+8vDxt2FnE1zvZXCkCcebI/C8Dt5xyaQBjxQIo="   crossorigin="anonymous"></script>;
 
 		<div id="corps">
 			<nav>
@@ -37,8 +37,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 						<li>Fest'Esaip
 							<ul>
-								<li><?php echo anchor($uri = $url_base."Historique/c1#historique", $title = 'historique', $attributes = 'contact')?>
-								<li><?php echo anchor($uri = $url_base."Historique/c1#contact", $title = 'Equipes / Contact', $attributes = 'contact')?></li>
+								<li><?php echo anchor($uri = $url_base."Historique/c1#historique", $title = 'historique')?>
+								<li><?php echo anchor($uri = $url_base."Historique/c1#contact", $title = 'Equipes / Contact')?></li>
 								<li>Sponsors</li>
 							</ul>
 						</li>
@@ -54,7 +54,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<li>Infos pratiques
 							<ul>
 								<li>Camping</li>
-								<li><?php echo anchor($uri = $url_base."Infos/c1#access", $title = 'Accessibilité', $attributes = 'access')?></li>
+								<li><?php echo anchor($uri = $url_base."Infos/c1#access", $title = 'Accessibilité')?></li>
 								<li>Venir au Fest'Esaip</li>
 							</ul>
 						</li>
@@ -77,6 +77,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                         <br />
 
                                         <input type="submit" value="Login" />
+                                        <a id="pass_oublie" href="<?php echo($url_base."/accueil/renvoyer_pass1")?>"><br />Mot de passe oublié</a>
+
                                     </fieldset>
                                 </form>
                             </ol>                                                     
