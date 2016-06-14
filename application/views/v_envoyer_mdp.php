@@ -19,7 +19,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						        <!--<legend></legend>-->
 
 						        <label for="mail">Adresse mail : </label>
-						        <input type="text" name="mail" id="mail" placeholder="Ex : xxx@yyy.com" size="8" maxlength="50" / required>
+						        <input type="email" name="mail" id="mail" placeholder="Ex : xxx@yyy.com" size="8" maxlength="50" / required>
 						        <br />
 
 						        <input type="submit" value="Envoyer" />
