@@ -45,7 +45,6 @@
 							</ul>
 						</li>
 
-						<li>S'inscrire / Tickets</li>
 
 						<li><?php echo $log_or_not ?>          
                             <ol>
