@@ -11,6 +11,7 @@ class Historique extends CI_Controller
 {      
         public function c1()
         {
+            $data = array();
             $this->load->model('login');
             $data['log_or_not'] = $this->login->login1();
 
