@@ -35,9 +35,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 						<li>Fest'Esaip
 							<ul>
-								<li><?php echo anchor($uri = $url_base."Historique/c1#historique", $title = 'historique', $attributes = 'contact')?>
-								<li><?php echo anchor($uri = $url_base."Historique/c1#contact", $title = 'Equipes / Contact', $attributes = 'contact')?></li>
-								<li>Sponsors</li>
+                                                            <li><?php echo anchor($uri = $url_base."Historique/c1#historique", $title = 'historique', $attributes = 'contact')?></li>
+                                                            <li><?php echo anchor($uri = $url_base."Historique/c1#contact", $title = 'Equipes / Contact', $attributes = 'contact')?></li>
+                                                            <li>Sponsors</li>
 							</ul>
 						</li>
 

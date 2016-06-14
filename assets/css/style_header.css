@@ -574,7 +574,7 @@ a, a:active
  table 
 	{ 
 		margin: auto;
-	    border-collapse: collapse;
+              border-collapse: collapse;
 		width: 100%
 	}
 	

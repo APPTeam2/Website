@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             $length = count($T_historique);
             for ($i = 1; $i < $length; $i++) {
                 echo "<tr>";
-                    echo "<th>";
+                    echo "<th class='espace'>";
                         echo $T_historique[$i][0];
                     echo "</th>";
                     echo "<th>";
@@ -102,9 +102,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <h3 id="contact">Equipe/contact</h3>
         <br>
         <ul>
-            <li class="espace">Chef supreme : Paul Tregouet</li>
+            <li class="espace">Chef supreme : Paul Trégouët</li>
             <li class="espace">Sous chef : Antoine Richard</li>
-            <li class="espace">Brute : Nathan Hardi</li>
+            <li class="espace">Brute : Nathan Hardy</li>
             <li class="espace">Enfant perdu : Adrien Pironneau</li>
             <li class="espace">Mascotte : Florian Levenez-Delafontaine</li>
             <li class="espace">Sous-fifre : Antoine Guillot</li>
