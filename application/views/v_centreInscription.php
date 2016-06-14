@@ -26,8 +26,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <input type="text" name="nom" id="nom"></input><br/>
                 <label for="prenom">Prénom :</label>
                 <input type="text" name="prenom" id="prenom"></input><br/>
-                <label for="mail">E-Mail :</label>
-                <input type="text" name="mail" id="mail"></input><br/>
+                <label for="text">E-Mail :</label>
+                <input type="email" name="mail" id="mail"></input><br/>
             </fieldset>
 
             <!-- Donnée de connexion des utilisateur -->
