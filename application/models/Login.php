@@ -25,30 +25,5 @@ Class Login extends CI_Model {
         return $data['log_or_not'];
     }
 
-    function modifier_pass($pass, $mail)
-    {
-      $requete = "update utilisateur SET password = MD5('".$pass."') WHERE mail='".$mail."'";
-      $this->db->query($requete);
-    }
-
-    function login2($username, $password)
-    {
-        $requete = "select IDuser, login, actif from utilisateur WHERE login='".$username."' and password='".MD5($password)."'";
-        $result = $this->db->query($requete);
-   
-        if($result -> num_rows() == 1)
-        {
-            return $result->result();
-        }
-        else
-        {
-            return false;
-        }
-    }
-
-
-
 }
-
-
 ?>
