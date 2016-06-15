@@ -27,18 +27,32 @@ Class Login extends CI_Model {
 
     function modifier_pass($pass, $mail)
     {
-      $requete = "update utilisateur SET password = MD5('".$pass."') WHERE mail='".$mail."'";
-      $this->db->query($requete);
+        $pass = password_hash($pass,PASSWORD_BCRYPT) ;
+        $requete = "update utilisateur SET password ='".$pass."' WHERE mail='".$mail."'";
+        $this->db->query($requete);
     }
 
     function login2($username, $password)
     {
-        $requete = "select IDuser, login, actif from utilisateur WHERE login='".$username."' and password='".MD5($password)."'";
+        $requete = "select IDuser, login, actif, password from utilisateur WHERE login='".$username."';";
         $result = $this->db->query($requete);
    
         if($result -> num_rows() == 1)
         {
-            return $result->result();
+            $result_pass= $result->row(0);
+            $result_pass=$result_pass->password;
+
+            if(password_verify($password, $result_pass))
+            {
+                $result=$result->row(0);
+                $data=array('id' => $result->IDuser, 'username' => $result->login, 'actif' => $result->actif);
+                return ($data);
+            }
+            else
+            {
+                return false;
+            }
+            
         }
         else
         {

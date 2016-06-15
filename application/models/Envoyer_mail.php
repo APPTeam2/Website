@@ -38,8 +38,7 @@ Class Envoyer_mail extends CI_Model {
        else
       {
          //show_error($this->email->print_debugger());
-        echo "Erreur, veuillez contacter l'administrateur :( <br />" ;
-        echo ('<a href="'.base_url().'">Retourner à la page : accueil</a>');
+        redirect('accueil/message', 'refresh'); 
       }
       
   }

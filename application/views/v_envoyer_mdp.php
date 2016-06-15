@@ -11,7 +11,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 				<section>
-					<article>
+					<article class="formulaires_verif">
 						
 						<form method="post" action="<?php echo($url_base.'accueil/renvoyer_pass2')?>">
 						    <!--légal de faire ça ? Mettre un lien dans une action ?-->
@@ -19,10 +19,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						        <!--<legend></legend>-->
 
 						        <label for="mail">Adresse mail : </label>
-						        <input type="email" name="mail" id="mail" placeholder="Ex : xxx@yyy.com" size="8" maxlength="50" / required>
-						        <br />
-
+						        <input type="email" name="mail" id="mail" placeholder="Ex : xxx@yyy.com" size="30" maxlength="50" / required>
 						        <input type="submit" value="Envoyer" />
+
 						    </fieldset>
 						</form>
 					</article>

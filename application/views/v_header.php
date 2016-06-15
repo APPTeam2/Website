@@ -27,7 +27,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			</h1>
 		</header>
 
-		<script   src="http://code.jquery.com/jquery-3.0.0.js"   integrity="sha256-jrPLZ+8vDxt2FnE1zvZXCkCcebI/C8Dt5xyaQBjxQIo="   crossorigin="anonymous"></script>
+		
 
 		<div id="corps">
 			<nav>
@@ -61,9 +61,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 						<li><a href="<?php echo($url_base.'Inscription/afficherFormulaire')?>">S'inscrire / Tickets</a></li>
 
-						<li><?php echo $log_or_not ?>          
+						<li id="formulaire_co_js"><?php echo $log_or_not ?>          
                             <ol>
-                                <form method="post" action="<?php echo($url_base.'accueil/login')?>">
+                                <form id="formulaire_co" method="post" action="<?php echo($url_base.'accueil/login')?>">
                                     <!--légal de faire ça ? Mettre un lien dans une action ?-->
                                     <fieldset>
                                         <!--<legend></legend>-->
@@ -86,3 +86,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					</ul>
 				</div>
 			</nav>
+
+<script src="http://code.jquery.com/jquery-3.0.0.js"   integrity="sha256-jrPLZ+8vDxt2FnE1zvZXCkCcebI/C8Dt5xyaQBjxQIo="   crossorigin="anonymous"></script>
+<script src="<?php echo($url_base.'/assets/script/header.js')?>"></script>
