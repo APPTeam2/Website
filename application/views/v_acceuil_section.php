@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<p style="color:white; font-family:daftpunk_font">Daft Punk</p>
 					<p style="color:white; font-family:thebeatles_font">The Beatles</p>
 					<p style="color:white; font-family:scorpions_font">SCORPIONS</p>
-					<p style="color:white; font-family:nirvana_font">NIRVANA</p>
+					<p style="color:white">NIRVANA</p>
 					<p style="color:white; font-family:ironmaiden_font">Iron Maiden</p>
 					<p style="color:white; font-family:acdc_font">AC*DC</p>
 				</figure>

@@ -21,7 +21,7 @@ class Accueil extends CI_Controller {
                     {
                         $data['url_base'] = base_url(); 
                         $this->load->view('v_header', $data);
-                        $this->load->view('v_acceuil_section', $data);
+                        $this->load->view('v_acceuil_section');
                         $this->load->view('v_sponsors');
                         $this->load->view('v_footer');
                     }
@@ -138,8 +138,6 @@ class Accueil extends CI_Controller {
             $result = $this->confirmation_mail->confirmation($code, $code_confirmation, $id);
 
 
-
-
             $sess_array=$this->session->userdata('logged_in');
             $sess_array['actif']=1;
             $this->session->set_userdata('logged_in', $sess_array);
@@ -162,69 +160,95 @@ class Accueil extends CI_Controller {
 
         public function renvoyer_pass2()
         {
-
+            $data = array();
             $mail = htmlspecialchars($_POST['mail']);
-
             $this->load->model('mail');
             $result = $this->mail->verif_mail($mail);
-
             if ($result==1)
             {                
                 $this->load->model('confirmation_mail');
                 $result = $this->confirmation_mail->non_confirmation($mail);
-
                 if($result==TRUE)
                 {
                     $mdp=rand ();
                     $mdp=$mdp.rand ();                  
-
                     $subject='Votre mot de passe FestEsaip';
                     $message="Votre mdp : ".$mdp;
-
-
                     $this->load->model('envoyer_mail');
                     $result = $this->envoyer_mail->envoyer($mail, $subject, $message);
-
                     if($result==TRUE)
                     {
                         $this->load->model('login');
                         $this->login->modifier_pass($mdp, $mail);
-                        echo "Nouveau mot de passe envoyé :) <br />" ;
-                        echo ('<a href="'.base_url().'">Retourner à la page : accueil</a>'); 
+                        $data['code']=1;
                     }
-
                     else
                     {
-                        echo "Erreur, nous ne pouvons envoyer de mail en ce moment :( <br />" ;
-                        echo ('<a href="'.base_url().'">Retourner à la page : accueil</a>'); 
+                        $this->confirmation_mail->non_confirmation($mail);
+                        /*peut engndrer une activation de compte, mais la personne
+                         n'ayant pas le mdp, ne pourra s'y connecter, sinon cela permet 
+                         d'outrepasser la verif de mail si le serveur mail est down*/
+                        $data['code']=2;   
                     }
                 }
-
                 else
                 {
-                    echo "Erreur, nous ne pouvons accéder à la BDD en ce momement :( <br />" ;
-                    echo ('<a href="'.base_url().'">Retourner à la page : accueil</a>'); 
+                    $this->confirmation_mail->non_confirmation($mail);
+                    $data['code']=3;  
                 }
-
             }
-
             else
             {
                 if($result==0)
                 {
-                    echo "Erreur, un nouveau mot de passe a déjà été envoyé :( <br />" ;
-                    echo ('<a href="'.base_url().'">Retourner à la page : accueil</a>');
-                    
+                    $data['code']=4;           
                 }
                 else
                 {
-                    echo "Erreur, adresse mail inconnue :( <br />" ;
-                    echo ('<a href="'.base_url().'">Retourner à la page : accueil</a>');
-                }
-                
-
+                    $data['code']=5;            
+                }                
             }
-            
+            $this->session->set_flashdata('code', $data);
+            redirect('accueil/message', 'refresh');
+        }
+
+        public function message()
+        {
+            $data=array();
+            $code_erreur=$this->session->flashdata('code')['code'];
+
+
+            if ($code_erreur==1)
+            {
+                $data['code_erreur']="Nouveau mot de passe envoyé :) <br />";
+            }
+            elseif ($code_erreur==2) 
+            {
+                $data['code_erreur']="Erreur, nous ne pouvons envoyer de mail en ce moment :( <br />" ;
+            }
+            elseif ($code_erreur==3) 
+            {
+                $data['code_erreur']="Erreur, nous ne pouvons accéder à la BDD en ce momement :( <br />" ;
+            }
+            elseif ($code_erreur==4) 
+            {
+                $data['code_erreur']="Erreur, un nouveau mot de passe a déjà été envoyé :( <br />" ;
+            }
+            elseif ($code_erreur==5) 
+            {
+                $data['code_erreur']="Erreur, adresse mail inconnue :( <br />" ;
+            }
+            else
+            {
+                $data['code_erreur']="Erreur inconnue :'( <br />Veuiller contacter un administrateur.";
+            }
+            $data['url_base'] = base_url();
+            $this->load->model('login');
+            $data['log_or_not'] = $this->login->login1();
+
+            $this->load->view('v_header', $data);
+            $this->load->view('v_message');
+            $this->load->view('v_footer');
         }
 
 }
