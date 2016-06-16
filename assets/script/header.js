@@ -28,14 +28,6 @@ function option()
 {
     var url = window.location.href.split( '/' );
     var len = url.length;
-    if (len==6)
-    {
-        var moins = 1;
-    }
-    else
-    {
-        var moins = 2;
-    }
     var url_f="";
     var i = 0;
     for (; i < len-moins; i++) 
@@ -48,6 +40,7 @@ function option()
 
     $formulaire_login=$('#formulaire_co_js');
     $formulaire_login.after("<li>"+'<a href="'+url_para+'"><img src="'+url_f+'assets/img/parametre.jpg" id="logo_titre" alt="Logo titre"/></a>'+"</li>");
+
 }
 
 
@@ -56,4 +49,3 @@ function option()
 option();
 
 formulaire();
-

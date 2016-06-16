@@ -5,7 +5,7 @@ function redirection()
   var url_f="";
 
   var i = 0;
-  for (; i < len-2; i++) {
+  for (; i < len-moins; i++) {
       url_f=url_f+(url[i]);
       url_f=url_f+('/');
   }
