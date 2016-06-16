@@ -1,4 +1,5 @@
 <?php
+
 /** Controleur de la page Inscription
  * 
  * @author Antoine RICHARD
@@ -21,9 +22,6 @@ class Inscription extends CI_Controller {
 
     //validation de création d'utilisateur 
     function validationcreerPersonne() {
-        $this->vue = new V_Vue("../vues/templates/template.inc.php");
-        $this->vue->ecrireDonnee('titreVue', "Validation de la création d'une personne");
-
         $civilite = htmlspecialchars($_POST['civilite']);
         $nom = htmlspecialchars($_POST['nom']);
         $prenom = htmlspecialchars($_POST['prenom']);
@@ -32,19 +30,25 @@ class Inscription extends CI_Controller {
         $login = htmlspecialchars($_POST['login']);
         $mdp = htmlspecialchars(md5($_POST['mdp']));
 
-        $unePersonne = new M_Personne(null, $civilite, $nom, $prenom, $mail, $login, $mdp);
-        $daoPers = new M_DaoPersonne();
-        $daoPers->connecter();
-        $pdo = $daoPers->getPdo();
-        $daoPers->insert($unePersonne);
+        $data = array(
+            'login' => $login,
+            'password' => $mdp,
+            'nomUser' => $nom,
+            'prenomUser' => $prenom,
+            'civilite' => $civilite,
+            'mail' => $mail
+        );
 
-        if ($daoPers) {
+        $this->db->insert('utilisateur', $data);
 
-            $this->vue->ecrireDonnee('centre', "../vues/includes/utilisateur/centreValiderCreationPersonne.php");
-        }
 
-        $this->vue->ecrireDonnee('loginAuthentification', MaSession::get('login'));
-        $this->vue->afficher();
+        $this->load->model('login');
+        $data['log_or_not'] = $this->login->login1();
+
+        $data['url_base'] = base_url();
+        $this->load->view('v_header', $data);
+        $this->load->view('v_centreValiderCreationPersonne');
+        $this->load->view('v_footer');
     }
 
 }
