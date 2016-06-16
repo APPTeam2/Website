@@ -26,35 +26,30 @@ function formulaire() {
 }
 
 
-function redirection() 
-{
-  var url = window.location.href.split( '/' );
-  var len = url.length;
-  var url_f="";
-
-  var i = 0;
-  for (; i < len-2; i++) {
-      url_f=url_f+(url[i]);
-      url_f=url_f+('/');
-  }
-  document.location.href=url_f; 
-
-}
-
 function option()
 {
     var url = window.location.href.split( '/' );
     var len = url.length;
+    if (len==6)
+    {
+        var moins = 1;
+    }
+    else
+    {
+        var moins = 2;
+    }
     var url_f="";
     var i = 0;
-    for (; i < len-2; i++) 
+    for (; i < len-moins; i++) 
     {
       url_f=url_f+(url[i]);
       url_f=url_f+('/');
     }
 
+    url_para=url_f+"parametre"+'/'+"c1";
+
     $formulaire_login=$('#formulaire_co_js');
-    $formulaire_login.after("<li>"+'<img src="'+url_f+'assets/img/logo_titre.jpg" id="logo_titre" alt="Logo titre"/>'+"</li>");
+    $formulaire_login.after("<li>"+'<a href="'+url_para+'"><img src="'+url_f+'assets/img/parametre.jpg" id="logo_titre" alt="Logo titre"/></a>'+"</li>");
 
 }
 
