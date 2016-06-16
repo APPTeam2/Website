@@ -12,7 +12,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <aside id="slider_artistes">
         <!-- Sources : http://codepen.io/dudleystorey/pen/ehKpi
                                   https://la-cascade.io/un-carrousel-responsif-en-pur-css/ -->
-        <h3>Artistes :</h3>
+        <h3 class="h3_accueil">Artistes :</h3>
         <figure id="artistes">
             <p style="color:white; font-family:nirvana_font">NIRVANA</p>
             <p style="color:white; font-family:ironmaiden_font">Iron Maiden</p>
@@ -26,7 +26,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </figure>
     </aside>
     <article id="presentation">
-        <h3>Présentation :</h3>
+        <h3 class="h3_accueil">Présentation :</h3>
         <p>Bienvenue sur le site de Fest'Esaip, festival numéro 1 de Saint-Barthélémy
             d'Anjou et ses environs. De nombreux artistes plus ou mois talentueux se 
             succéderont lors de cette 42<sup>ème</sup> édition de Fest'Esaip sponsorisée 

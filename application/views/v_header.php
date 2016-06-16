@@ -57,7 +57,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							</ul>
 						</li>
 
-						<li>S'inscrire / Tickets</li>
+						<li><?php echo anchor($uri = $url_base."Tickets/c_tickets", $title = 'S\'inscrire / Tickets')?></li>
 
 						<li><?php echo $log_or_not ?>          
                             <ol>

@@ -8,9 +8,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * @date 08/06/16
  * @version 1.2
  */
-class Programmation extends CI_Controller {
+class Tickets extends CI_Controller {
 
-    public function c_prog()
+    public function c_tickets()
     {
         $sess_array = $this->session->userdata('logged_in');
         $data = array();
@@ -25,11 +25,10 @@ class Programmation extends CI_Controller {
 
         $data['url_base'] = base_url();
         $this->load->view('v_header', $data);
-        $this->load->model('M_programmation');
+        /*$this->load->model('M_tickets');*/
 
-        $data['T_concerts'] = $this->M_programmation->concerts();
-        $this->load->view('v_programmation',$data);
-        $this->load->view('v_sponsors');
+        /*$data['T_concerts'] = $this->M_tickets->concerts();*/
+        $this->load->view('v_tickets',$data);
         $this->load->view('v_footer');
     }
 }

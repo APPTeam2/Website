@@ -93,20 +93,7 @@ h1
 	text-decoration: none;
 }
 
-/* Début code Nathan */
-h3
-{
-	color: yellow;
-	font-size: 175%;
-	text-align: center;
-	font-weight: bold;
-	font-style: normal;
-	font-family: Raavi;
-	text-decoration: none;
-	margin: 0% 0% 0% 0%;
-        padding: 1% 0% 0% 0%;
-}
-/* Fin code Nathan */
+
 /*FLO*/
 h4{
 	font-size : 130%;
@@ -209,9 +196,37 @@ a, a:active
 		Fin Antoine GUILLOT*/
                 
 	/* Début code Nathan */
+        
+        .h3_accueil
+        {
+            color: #FFDD00;
+            font-size: 175%;
+            text-align: center;
+            font-weight: bold;
+            font-style: normal;
+            font-family: Raavi;
+            text-decoration: none;
+            margin: 1% 0% 0% 0%;
+        }
+        
+        h3, .h3_sponsors
+        {
+            color: #FFDD00;
+            font-size: 175%;
+            text-align: center;
+            font-weight: bold;
+            font-style: normal;
+            font-family: Raavi;
+            text-decoration: none;
+            margin: 0% 0% 0% 0%;
+        }
+        
+        /*___View Accueil___*/
+        
 	section aside#slider_artistes, section aside#slider_sponsors
 	{	
             margin: 1.5% 0% 1.5% 0%;
+            padding: 1% 0% 1% 0%;
             height: auto;
             background-color: rgba(0, 0, 0, 0.7);
         }
@@ -273,6 +288,8 @@ a, a:active
             margin: -2% 0% -1% 0%;
             animation: 15s slidy_artistes infinite; 
 	}
+        
+        /*___View Sponsors___*/
 	
 	.small_image, .image_mobile
 	{
@@ -324,50 +341,139 @@ a, a:active
             animation: 15s slidy_sponsors infinite;
 	}
         
+        /*___View Programmation___*/
+        
         section#programmation
         {
             font-size: 105%;
             color: white;
         }
         
-        section article#animations p, section article#stands p, section article#concerts 
+        .h3_programmation
         {
-            padding: 0% 3% 0% 3%;
+            color: #FFDD00;
+            font-size: 175%;
+            text-align: center;
+            font-weight: bold;
+            font-style: normal;
+            font-family: Raavi;
+            text-decoration: none;
+            margin: 0% 0% 0% 0%;
+        }
+        
+        section article#animations p, section article#stands p, section article#concerts p 
+        {
             text-align: center;
         }
         
-        section article#animations ul
+        section article#animations , section article#stands , section article#concerts 
+        {
+            padding: 1% 3% 1% 3%;
+        }
+        
+        section article#animations div, section article#stands div, section article#concerts div
         {
             display: flex;
             flex-direction: row;
-            justify-content: space-around;
-        }
-        ul.liste_animations_stands1
-        {
-            
-            
+            justify-content: center;
+            align-items: center;
         }
         
-        ul.liste_animations_stands2
+        section article#concerts div table#tab_concerts tbody tr:hover
         {
-            
-            
+            font-size: 115%;
+            color: #FFE07A;
+            cursor: default;
         }
         
-        article#concerts
+        section article#concerts div table#tab_concerts thead
         {
+            font-size: 120%;
+            color: #FFDD00;
+            text-align: center;
+            font-weight: bold;
+            font-style: normal;
+            font-family: Raavi;
+        }
+        
+        section article#concerts div table#tab_concerts td
+        {
+            width: 10%;
+        }
+        section article#concerts div table#tab_concerts td
+        {
+             font-size: 110%;
+             text-align: center;
+             padding: 0.5% 0% 0.5% 0%;
+        }
+        
+        ul.liste_animations_stands_concerts
+        {
+            font-size: 120%;
+            width: 100%;
+            padding: 0% 0% 0% 15%;
+        }
+        
+        /*___View Tickets___*/
+        
+        div#tickets
+        {
+            background-color: rgba(0, 0, 0, 0.7);
+            margin: 2% 0% 0% 0%;
+            padding: 1% 3% 1% 3%;
             display: flex;
             flex-direction: column;
+            flex-wrap: nowrap;
             justify-content: center;
-            align-item: center;
+            align-items: center;
             align-content: center;
+            text-align: center;
+            color: white;
         }
+       
+        
+        div#tickets fieldset#acheter_tickets
+        {
+            width: 40%;
+        }
+        
+        div#tickets fieldset#acheter_tickets legend
+        {
+            font-size: 150%;
+            color: #FFDD00;
+            text-align: center;
+            font-weight: bold;
+            font-style: normal;
+            font-family: Raavi;
+        }
+        
+        div#tickets fieldset#acheter_tickets label
+        {
+            font-size: 100%;
+            color: white;
+            text-align: center;
+            font-style: normal;
+            font-family: Calibri;
+            float: left;
+        }
+        
+        div#tickets fieldset#acheter_tickets input
+        {
+            font-size: 100%;
+            color: white;
+            text-align: center;
+            font-style: normal;
+            font-family: Calibri;
+            float: right;
+        }
+        
+        
         
 	/* Fin code Nathan */
 
 
 	 /*START FestEsaip (Flor)*/
-         table 
+         table
          { 
              margin: auto;
              border-collapse: collapse;
@@ -469,7 +575,6 @@ a, a:active
 		display: flex;
 		flex-direction: row;
 		justify-content: left;
-		
 	}
 
 	#menu ol
@@ -484,16 +589,49 @@ a, a:active
 		Fin Antoine GUILLOT*/
                 
 	/* Début code Nathan */
+        
+        .h3_accueil
+        {
+            color: #FFDD00;
+            font-size: 175%;
+            text-align: center;
+            font-weight: bold;
+            font-style: normal;
+            font-family: Raavi;
+            text-decoration: none;
+            margin: 1% 0% 0% 0%;
+        }
+        
+        .h3_sponsors
+        {
+            color: #FFDD00;
+            font-size: 175%;
+            text-align: center;
+            font-weight: bold;
+            font-style: normal;
+            font-family: Raavi;
+            text-decoration: none;
+            margin: 0% 0% 0% 0%;
+        }
+        
+        section
+	{
+            width: calc(100% - 130px); /*Merci Antoine pour les pixels. Pensez au 'calc'!*/
+            margin: 1.5% 3% 1.5% 3%;
+	}
+        
+        /*___View Accueil___*/
+        
 	section aside
 	{	
-		margin: 1.5% 3% 1.5% 3%;
+		margin: 1.5% 0% 0% 0%;
 		height: auto;
 		background-color: rgba(0, 0, 0, 0.7);
 	}
 
 	section article#presentation
 	{	
-		margin: 1.5% 3% 0% 3%;
+		margin: 1.5% 0% 0% 0%;
 		padding: 0.5% 0% 1.5% 0%;
 		height: auto;
 	}
@@ -522,6 +660,8 @@ a, a:active
 		display: none;
 	}
 	
+        /*___View Sponsors*/
+        
 	.small_image
 	{
 		width: 55px;
@@ -538,11 +678,110 @@ a, a:active
 		justify-content: space-around;
 		align-items: center;
 	}
-	
-	section
-	{
-		width: calc(100% - 130px); /*Merci Antoine pour les pixels. Pensez au 'calc'!*/
-	}
+        
+        /*___View Programmation___*/
+
+        .h3_programmation
+        {
+            color: #FFDD00;
+            font-size: 175%;
+            text-align: center;
+            font-weight: bold;
+            font-style: normal;
+            font-family: Raavi;
+            text-decoration: none;
+            margin: 0% 0% 0% 0%;
+        }
+        
+        section#programmation
+        {
+            font-size: 105%;
+            color: white;
+        }
+        
+        .h3_programmation
+        {
+            color: #FFDD00;
+            font-size: 175%;
+            text-align: center;
+            font-weight: bold;
+            font-style: normal;
+            font-family: Raavi;
+            text-decoration: none;
+            margin: 0% 0% 0% 0%;
+        }
+        
+        article#animations p, article#stands p, article#concerts p 
+        {
+            text-align: center;
+        }
+        
+        section article#animations , article#stands , article#concerts 
+        {
+            padding: 1% 3% 1% 3%;
+        }
+        
+        article#animations div, article#stands div, article#concerts div
+        {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        article#concerts div table#tab_concerts tbody tr
+        {
+            font-size: 100%;
+            border-bottom: 1px solid #FFDD00;
+            border-top: 1px solid #FFDD00;
+        }
+        
+        article#concerts div table#tab_concerts thead
+        {
+            font-size: 120%;
+            color: #FFDD00;
+            text-align: center;
+            font-weight: bold;
+            font-style: normal;
+            font-family: Raavi;
+        }
+        
+        article#concerts div table#tab_concerts td
+        {
+            width: 10%;
+        }
+        
+        article#concerts div table#tab_concerts td
+        {
+             font-size: 110%;
+             text-align: center;
+             padding: 0.5% 0% 0.5% 0%;
+        }
+        
+        ul.liste_animations_stands_concerts
+        {
+            padding: 0% 0% 0% 15%;
+            font-size: 120%;
+            width: 100%;
+        }
+        
+        /*___View Tickets___*/
+        
+        div.tickets
+        {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        
+        div.tickets p
+        {
+            color: white;
+            font-size: 100%
+            text-align center;            
+        }
+        
+        
+        
+        
 	/* Fin code Nathan */
         
      /** START Fest'ESAIP PART 

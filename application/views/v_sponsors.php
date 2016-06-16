@@ -9,7 +9,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 
 <aside id="slider_sponsors">
-    <h3>Sponsors :</h3>
+    <h3 class="h3_sponsors">Sponsors :</h3>
     <figure id="sponsors">
         <img class="small_image" src="<?php echo($url_base . '/assets/img/images/sponsors/sopalin.png') ?>" "alt="Sopalin"/>
         <img class="small_image" src="<?php echo($url_base . '/assets/img/images/sponsors/carglass.png') ?>" alt="Carglass"/>
