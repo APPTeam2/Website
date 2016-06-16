@@ -81,7 +81,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                                     </fieldset>
                                 </form>
-                            </ol>                                                     
+                            </ol>                                                   
 						</li>
 					</ul>
 				</div>
