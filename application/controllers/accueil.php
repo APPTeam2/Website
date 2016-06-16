@@ -22,6 +22,7 @@ class Accueil extends CI_Controller {
                         $data['url_base'] = base_url(); 
                         $this->load->view('v_header', $data);
                         $this->load->view('v_acceuil_section', $data);
+                        $this->load->view('v_sponsors', $data);
                         $this->load->view('v_footer');
                     }
                     else
@@ -34,7 +35,8 @@ class Accueil extends CI_Controller {
                     $data['log_or_not']='Se connecter';
                     $data['url_base'] = base_url(); 
                     $this->load->view('v_header', $data);
-                    $this->load->view('v_acceuil_section', $data);
+                    $this->load->view('v_acceuil_section');
+                    $this->load->view('v_sponsors');
                     $this->load->view('v_footer');
                 }
                 
@@ -168,7 +170,7 @@ class Accueil extends CI_Controller {
             $sess_array['actif']=1;
             $this->session->set_userdata('logged_in', $sess_array);
 
-            redirect('', 'refresh');  
+            redirect('', 'refresh');
         }
 
 }

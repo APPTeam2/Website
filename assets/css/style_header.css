@@ -330,37 +330,28 @@ a, a:active
             color: white;
         }
         
-        section article#animations p, section article#stands p, section article#concerts p
+        section article#animations p, section article#stands p, section article#concerts 
         {
             padding: 0% 3% 0% 3%;
             text-align: center;
         }
         
-        /*section article#animations
-        {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            flex-wrap: nowrap;
-            align-item: center;
-        }*/
-        
-        ul.liste_animations_stands1
+        section article#animations ul
         {
             display: flex;
             flex-direction: row;
             justify-content: space-around;
-            align-item: center;
-            padding: 0% 1% 0% 1%;
+        }
+        ul.liste_animations_stands1
+        {
+            
+            
         }
         
         ul.liste_animations_stands2
         {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-item: center;
-            padding: 0% 1% 0% 1%;
+            
+            
         }
         
         article#concerts
