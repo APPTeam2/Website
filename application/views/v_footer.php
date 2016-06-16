@@ -17,10 +17,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="footer-title">Fest'Esaip</div>
         <div class="footer-body">
             <li>
-                <a href="Historique/c1#historique" >Historique</a>
+                <?php echo anchor($uri = $url_base."Historique/c1#historique", $title = 'Historique')?>
             </li>
             <li>
-                <a href="Historique/c1#contact" >Equipes / Contact</a>
+                <?php echo anchor($uri = $url_base."Historique/c1#contact", $title = 'Equipes / Contact')?>
             </li>
             <li>Sponsors</li>
         </div>
@@ -40,7 +40,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="footer-body">
             <li>Camping</li>
             <li>
-                <a href="" >Accessibilité</a>
+                <?php echo anchor($uri = $url_base."Infos/access", $title = 'Accessibilité')?>
             </li>
             <li>Venir au Fest'Esaip</li>
         </div>

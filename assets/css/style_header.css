@@ -527,7 +527,7 @@ a, a:active
 
 	#menu ol
 	{
-		width: 130px;
+		width: 120px;
 		position: relative;
 		margin: 0% 0% 0% 0px;
 	    padding: 0% 0% 0% 0%;
@@ -824,7 +824,7 @@ li
 }
 
 
-@media screen and (max-width: 1024px)
+@media screen and (max-width: 1025px)
 {
 
     footer
@@ -898,16 +898,86 @@ li
 */
 
 section article
-   {
+{
     color: white;
-    font-size: 100%;
     margin: 1.5% 0% 0% 0%;
 	padding: 2%;
 	height: auto;
 	background-color: rgba(0, 0, 0, 0.7);
+    text-align: justify;
     font-size: 0.930em;
     font-family: 'Segoe UI', 'Segoe WP', Tahoma, Arial, sans-serif;
-   }
+}
+
+@media screen and (max-width: 1025px)
+{
+        section article
+    {
+        color: white;
+        margin: 1.5% 3% 0% 3%;
+        padding: 2%;
+        height: auto;
+        background-color: rgba(0, 0, 0, 0.7);
+        text-align: justify;
+        font-size: 0.930em;
+        font-family: 'Segoe UI', 'Segoe WP', Tahoma, Arial, sans-serif;
+    }
+}
+
    
 
 /* END ACCESS PART */
+
+
+/** START COME PART 
+ * @author Adrien PIRONNEAU
+ * @source http://embedgooglemaps.com/fr/
+ * @date 14/06/2016
+ * @version 0.1
+*/
+
+
+.gmaps
+{
+    margin: 1.5% 0 0 0;
+}
+#gmap_canvas
+{
+    overflow: hidden;
+    position: relative;
+    height: 400px;
+    width: 80%;
+    margin: auto;
+}
+
+#gmap_canvas img
+{
+    max-width: none!important;
+    background: none!important; 
+}
+   
+@media screen and (max-width: 1025px)
+{
+    .gmaps
+    {
+        margin: 1.5% 1.5% 0 1.5%;
+    }
+    #gmap_canvas
+    {
+        overflow: hidden;
+        display: flex;
+        position: absolute;
+        height: 325px;
+        max-width: 71%;
+        margin: auto;
+        margin-top: 1%;
+        
+    }
+
+    #gmap_canvas img
+    {
+        max-width: none!important;
+        background: none!important;    
+    }
+}
+/* END COME PART */
