@@ -20,8 +20,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 						        <label for="code">Code de confirmation : </label>
 						        <input type="text" name="code" id="code" placeholder="Ex : 1232324342" size="30" maxlength="25" / required>
-						        <br />
-
 						        <input type="submit" value="Login" />
 						    </fieldset>
 						</form>

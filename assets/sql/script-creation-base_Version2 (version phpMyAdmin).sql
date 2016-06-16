@@ -19,8 +19,7 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `festesaip`
 --
-CREATE DATABASE IF NOT EXISTS `festesaip` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-USE `festesaip`;
+
 
 -- --------------------------------------------------------
 

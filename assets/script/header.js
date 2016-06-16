@@ -21,8 +21,6 @@ function formulaire() {
             $login.show();
         }
     );
-
-
 }
 
 
@@ -50,8 +48,9 @@ function option()
 
     $formulaire_login=$('#formulaire_co_js');
     $formulaire_login.after("<li>"+'<a href="'+url_para+'"><img src="'+url_f+'assets/img/parametre.jpg" id="logo_titre" alt="Logo titre"/></a>'+"</li>");
-
 }
+
+
 
 
 option();
