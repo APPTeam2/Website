@@ -54,8 +54,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<li>Infos pratiques
 							<ul>
 								<li>Camping</li>
-								<li><?php echo anchor($uri = $url_base."Infos/c1#access", $title = 'Accessibilité')?></li>
-								<li>Venir au Fest'Esaip</li>
+								<li><?php echo anchor($uri = $url_base."Infos/access", $title = 'Accessibilité')?></li>
+								<li><?php echo anchor($uri = $url_base."Infos/mode", $title = 'Venir au Fest\'Esaip')?></li>
 							</ul>
 						</li>
 
