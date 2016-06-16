@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Jeu 09 Juin 2016 à 14:35
+-- Généré le :  Jeu 16 Juin 2016 à 17:42
 -- Version du serveur :  5.7.9
 -- Version de PHP :  5.6.16
 
@@ -17,10 +17,8 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données :  `festesaip`
+-- Base de données :  `test`
 --
-CREATE DATABASE IF NOT EXISTS `festesaip` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-USE `festesaip`;
 
 -- --------------------------------------------------------
 
@@ -33,7 +31,7 @@ CREATE TABLE IF NOT EXISTS `accueillir` (
   `idArtiste` int(11) NOT NULL,
   `idFestival` int(11) NOT NULL,
   PRIMARY KEY (`idArtiste`,`idFestival`),
-  KEY `FK_Accueillir_idFestival` (`idFestival`)
+  KEY `FK_accueillir_idFestival` (`idFestival`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -60,11 +58,13 @@ CREATE TABLE IF NOT EXISTS `billet` (
   `idBillet` int(11) NOT NULL AUTO_INCREMENT,
   `nomTitulaire` varchar(25) NOT NULL,
   `prenomTitulaire` varchar(25) NOT NULL,
+  `dateDebutBillet` date NOT NULL,
+  `dateFinBillet` date NOT NULL,
   `idFestival` int(11) NOT NULL,
   `idUser` int(11) NOT NULL,
   PRIMARY KEY (`idBillet`),
-  KEY `FK_BILLET_idFestival` (`idFestival`),
-  KEY `FK_BILLET_idUser` (`idUser`)
+  KEY `FK_billet_idFestival` (`idFestival`),
+  KEY `FK_billet_idUser` (`idUser`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -80,7 +80,7 @@ CREATE TABLE IF NOT EXISTS `concert` (
   `heureDebut` time NOT NULL,
   `idFestival` int(11) NOT NULL,
   PRIMARY KEY (`idConcert`),
-  KEY `FK_CONCERT_idFestival` (`idFestival`)
+  KEY `FK_concert_idFestival` (`idFestival`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -95,6 +95,9 @@ CREATE TABLE IF NOT EXISTS `festival` (
   `theme` varchar(255) DEFAULT NULL,
   `dateDebut` date NOT NULL,
   `dateFin` date NOT NULL,
+  `placeMax` int(11) NOT NULL,
+  `prixBillet3Jours` decimal(15,3) NOT NULL,
+  `prixBillet1Jour` decimal(15,3) NOT NULL,
   PRIMARY KEY (`idFestival`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -109,7 +112,7 @@ CREATE TABLE IF NOT EXISTS `jouer` (
   `idConcert` int(11) NOT NULL,
   `idArtiste` int(11) NOT NULL,
   PRIMARY KEY (`idConcert`,`idArtiste`),
-  KEY `FK_Jouer_idArtiste` (`idArtiste`)
+  KEY `FK_jouer_idArtiste` (`idArtiste`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -129,8 +132,7 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
   `mail` varchar(255) NOT NULL,
   `actif` tinyint(1) NOT NULL,
   PRIMARY KEY (`idUser`),
-  UNIQUE KEY `login` (`login`),
-  UNIQUE KEY `mail` (`mail`)
+  UNIQUE KEY `login` (`login`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -141,28 +143,28 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
 -- Contraintes pour la table `accueillir`
 --
 ALTER TABLE `accueillir`
-  ADD CONSTRAINT `FK_Accueillir_idArtiste` FOREIGN KEY (`idArtiste`) REFERENCES `artiste` (`idArtiste`),
-  ADD CONSTRAINT `FK_Accueillir_idFestival` FOREIGN KEY (`idFestival`) REFERENCES `festival` (`idFestival`);
+  ADD CONSTRAINT `FK_accueillir_idArtiste` FOREIGN KEY (`idArtiste`) REFERENCES `artiste` (`idArtiste`),
+  ADD CONSTRAINT `FK_accueillir_idFestival` FOREIGN KEY (`idFestival`) REFERENCES `festival` (`idFestival`);
 
 --
 -- Contraintes pour la table `billet`
 --
 ALTER TABLE `billet`
-  ADD CONSTRAINT `FK_BILLET_idFestival` FOREIGN KEY (`idFestival`) REFERENCES `festival` (`idFestival`),
-  ADD CONSTRAINT `FK_BILLET_idUser` FOREIGN KEY (`idUser`) REFERENCES `utilisateur` (`idUser`);
+  ADD CONSTRAINT `FK_billet_idFestival` FOREIGN KEY (`idFestival`) REFERENCES `festival` (`idFestival`),
+  ADD CONSTRAINT `FK_billet_idUser` FOREIGN KEY (`idUser`) REFERENCES `utilisateur` (`idUser`);
 
 --
 -- Contraintes pour la table `concert`
 --
 ALTER TABLE `concert`
-  ADD CONSTRAINT `FK_CONCERT_idFestival` FOREIGN KEY (`idFestival`) REFERENCES `festival` (`idFestival`);
+  ADD CONSTRAINT `FK_concert_idFestival` FOREIGN KEY (`idFestival`) REFERENCES `festival` (`idFestival`);
 
 --
 -- Contraintes pour la table `jouer`
 --
 ALTER TABLE `jouer`
-  ADD CONSTRAINT `FK_Jouer_idArtiste` FOREIGN KEY (`idArtiste`) REFERENCES `artiste` (`idArtiste`),
-  ADD CONSTRAINT `FK_Jouer_idConcert` FOREIGN KEY (`idConcert`) REFERENCES `concert` (`idConcert`);
+  ADD CONSTRAINT `FK_jouer_idArtiste` FOREIGN KEY (`idArtiste`) REFERENCES `artiste` (`idArtiste`),
+  ADD CONSTRAINT `FK_jouer_idConcert` FOREIGN KEY (`idConcert`) REFERENCES `concert` (`idConcert`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
