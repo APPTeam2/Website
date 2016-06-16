@@ -32,6 +32,19 @@ Class Login extends CI_Model {
         $this->db->query($requete);
     }
 
+    function modifier_pass2($pass, $login)
+    {
+        $pass = password_hash($pass,PASSWORD_BCRYPT) ;
+        $requete = "update utilisateur SET password ='".$pass."' WHERE login='".$login."'";
+        $this->db->query($requete);
+    }
+
+    function modifier_mail($mail, $login)
+    {
+        $requete = "update utilisateur SET mail ='".$mail."' WHERE login='".$login."'";
+        $this->db->query($requete);
+    }
+
     function login2($username, $password)
     {
         $requete = "select IDuser, login, actif, password from utilisateur WHERE login='".$username."';";
@@ -58,6 +71,20 @@ Class Login extends CI_Model {
         {
             return false;
         }
+    }
+
+    function recuperer_login() 
+    {
+        $sess_array=$this->session->userdata('logged_in');
+        $data = array();
+        if($sess_array['id']!=NULL)
+            {
+                return($sess_array['username']);
+            }
+        else 
+            {
+                return(FALSE);
+            }
     }
 
 

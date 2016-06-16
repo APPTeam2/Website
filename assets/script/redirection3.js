@@ -9,7 +9,6 @@ function redirection()
       url_f=url_f+(url[i]);
       url_f=url_f+('/');
   }
-  
   document.location.href=url_f; 
 
 }

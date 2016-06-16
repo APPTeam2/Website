@@ -9,7 +9,7 @@ function redirection()
       url_f=url_f+(url[i]);
       url_f=url_f+('/');
   }
-  
+  url_f=url_f+('/parametre/c1');
   document.location.href=url_f; 
 
 }
