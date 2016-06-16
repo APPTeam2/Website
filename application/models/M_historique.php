@@ -14,8 +14,8 @@ Class M_historique extends CI_Model {
                             DISTINCT festival.theme, artiste.nomArtiste 
                     FROM 
                             festival 
-                                    INNER JOIN CONCERT 
-                                            ON CONCERT.idfestival=festival.idFestival 
+                                    INNER JOIN concert 
+                                            ON concert.idfestival=festival.idFestival 
                                     INNER JOIN jouer
                                             ON concert.idConcert=jouer.idConcert 
                                     INNER JOIN artiste

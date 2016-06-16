@@ -29,7 +29,7 @@ class Parametre extends CI_Controller
             $data['url_base'] = base_url();
             $data['log_or_not'] = $this->login->login1();
             $this->load->view('v_header', $data);
-            $this->load->view('v_message3');
+            $this->load->view('v_message');
             $this->load->view('v_footer');
         }
 
