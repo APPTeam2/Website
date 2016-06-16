@@ -28,6 +28,7 @@ function option()
 {
     var url = window.location.href.split( '/' );
     var len = url.length;
+    var moins= len - 5;//-4 à la racine
     var url_f="";
     var i = 0;
     for (; i < len-moins; i++) 
