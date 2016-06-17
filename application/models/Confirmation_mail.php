@@ -14,7 +14,7 @@ Class Confirmation_mail extends CI_Model
 
       if($code == $code_confirmation)
       {
-         $requete = "update utilisateur SET actif = '1' WHERE idUser='".$id."'";
+         $requete = "update utilisateur SET actif = '1' WHERE idUser=".$this->db->escape($id).";";
          $result = $this->db->query($requete);
 
          return true;
@@ -28,7 +28,7 @@ Class Confirmation_mail extends CI_Model
 
    function non_confirmation($mail)
    {
-      $requete = "select actif FROM utilisateur WHERE mail='".$mail."'";
+      $requete = "select actif FROM utilisateur WHERE mail=".$this->db->escape($mail).";";
       $result = $this->db->query($requete);
 
       $result= $result->row(0);
@@ -37,7 +37,7 @@ Class Confirmation_mail extends CI_Model
 
       if ($result==1)
       {
-         $requete = "update utilisateur SET actif = '0' WHERE mail='".$mail."'";
+         $requete = "update utilisateur SET actif = '0' WHERE mail=".$this->db->escape($mail).";";
          $this->db->query($requete);
          return(TRUE);
       }
