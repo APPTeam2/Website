@@ -1,3 +1,10 @@
+/** -
+ * 
+ * @author Antoine GUILLOT
+ * @date 08/06/16
+ * @version 1
+ */
+
 function redirection() 
 {
   var url = window.location.href.split( '/' );

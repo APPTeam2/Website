@@ -485,7 +485,7 @@ a, a:active
     }
 	nav
 	{
-		width: 130px;
+		min-width: 130px;
 		/*border: 1px solid black;*/
 		margin: 1% 1% 0% 0%;
 		background-color: rgba(0, 0, 0, 0.7);
