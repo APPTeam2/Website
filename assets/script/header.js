@@ -23,8 +23,8 @@ function formulaire() {
             $login.show();
         }
     );
-}
 
+}
 
 function option()
 {
@@ -52,3 +52,4 @@ function option()
 option();
 
 formulaire();
+
