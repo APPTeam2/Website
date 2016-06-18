@@ -8,7 +8,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 
-<section>
+<section id="v_progra">
     <article id="animations">
         <h3 class="h3_programmation">Animations :</h3>
         <p>
