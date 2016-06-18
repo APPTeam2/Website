@@ -59,7 +59,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							</ul>
 						</li>
 
-						<li><a href="<?php echo($url_base.'Inscription/afficherFormulaire')?>">S'inscrire / Tickets</a></li>
+						<li><a href="<?php echo($url_base.'Inscription_Ticket/c1')?>">S'inscrire / Tickets</a></li>
 
 						<li id="formulaire_co_js"><?php echo $log_or_not ?>          
                             <ol>
