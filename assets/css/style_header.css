@@ -515,6 +515,7 @@ a, a:active
             font-size: 120%;
             width: 100%;
             padding: 0% 0% 0% 15%;
+            list-style-type: none;
         }
         
         /*___View Tickets___*/

@@ -19,15 +19,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <div class="contact-area">
         <div class="contact-form">
             <form class="contact-text-form">
-                <input type="text" placeholder="Title"/>
-                <textarea name="comment" form="usrform" placeholder="Enter text here..." rows='10'></textarea>
-                <button>Send</button>
-                <p class="message">Do you need to edit? <a class="button-next button-next-a" href="#">Previous</a></p>
+                <input type="text" placeholder="Titre"/>
+                <textarea name="comment" form="usrform" placeholder="Entrez votre texte ici" rows='10'></textarea>
+                <button>Envoyer</button>
+                <p class="message">Vous souhaitez faire un retour arrière ? <a class="button-next button-next-a">C'est ici.</a></p>
             </form>
             <form class="contact-login-form">
-                <input type="text" placeholder="Username"/>
-                <input type="email" placeholder="Email address"/>
-                <button class="button-next" href="#">Next</button>
+                <input type="text" placeholder="Pseudo"/>
+                <input type="email" placeholder="Adresse mail"/>
+                <button class="button-next">Suivant</button>
             </form>
         </div>
     </div>
