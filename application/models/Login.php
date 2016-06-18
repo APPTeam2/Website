@@ -28,26 +28,26 @@ Class Login extends CI_Model {
     function modifier_pass($pass, $mail)
     {
         $pass = password_hash($pass,PASSWORD_BCRYPT) ;
-        $requete = "update utilisateur SET password ='".$pass."' WHERE mail='".$mail."'";
+        $requete = "update utilisateur SET password =".$this->db->escape($pass)." WHERE mail=".$this->db->escape($mail).";";
         $this->db->query($requete);
     }
 
     function modifier_pass2($pass, $login)
     {
         $pass = password_hash($pass,PASSWORD_BCRYPT) ;
-        $requete = "update utilisateur SET password ='".$pass."' WHERE login='".$login."'";
+        $requete = "update utilisateur SET password =".$this->db->escape($pass)." WHERE login=".$this->db->escape($login).";";
         $this->db->query($requete);
     }
 
     function modifier_mail($mail, $login)
     {
-        $requete = "update utilisateur SET mail ='".$mail."' WHERE login='".$login."'";
+        $requete = "update utilisateur SET mail =".$this->db->escape($mail)." WHERE login=".$this->db->escape($login).";";
         $this->db->query($requete);
     }
 
     function login2($username, $password)
     {
-        $requete = "select IDuser, login, actif, password from utilisateur WHERE login='".$username."';";
+        $requete = "select IDuser, login, actif, password from utilisateur WHERE login=".$this->db->escape($username).";";
         $result = $this->db->query($requete);
    
         if($result -> num_rows() == 1)
