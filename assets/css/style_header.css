@@ -28,6 +28,15 @@
  * @date 08/06/16
  * @version 1
  */
+
+#message_nojava
+{
+    color: white;
+    text-align: center;
+    font-family: Impact;
+    font-size: 120%;
+}
+
 body
 {
 	min-width: 500px;
@@ -128,6 +137,12 @@ h1
 	color:red;
 }
 
+#v_progra article
+{
+    margin: 0%;
+    padding: 0%;
+}
+
 
 /*FLO*/
 h4{
@@ -203,6 +218,7 @@ a, a:active
     	background-image: url(../img/fond.jpg);
         width: 65%;
     }
+
 	nav
 	{
 		/*border: 1px solid black;*/
@@ -515,6 +531,7 @@ a, a:active
             font-size: 120%;
             width: 100%;
             padding: 0% 0% 0% 15%;
+            list-style-type: none;
         }
         
         /*___View Tickets___*/
@@ -867,6 +884,7 @@ figure#sponsors
         padding: 0% 0% 0% 15%;
         font-size: 120%;
         width: 100%;
+        list-style-type: none;
     }
     
     /*___View Tickets___*/
@@ -997,48 +1015,55 @@ footer
     margin-right: auto;
     margin-top : 2%;
     background-color: rgba(0, 0, 0, 0.7);
-    color: grey;
-    display: table;
+    color: gray;
     font-size: 0.938em;
     font-family: 'Segoe UI', 'Segoe WP', Tahoma, Arial, sans-serif;
+    list-style-type: none;
     
 }
 
-li
+.footer-container
 {
-    list-style-type:none;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin-top: 2%;
+    padding: 1.5%;
 }
 
-.footer-row
+.footer-item
 {
-    display: table-row;
-}
-
-.footer-widget
-{
-    padding: 1% 0 1% 0;
-    display: table-cell;
-    max-width: 18% !important;
     text-shadow: 0px 1px 1px rgba(0, 0, 0, 1);
+    align-items: stretch;
+    padding: 2%;
 }
 
-#footer-widget-left
+.footer-item:nth-child(4)
 {
-   padding-left: 1.5%;
+    flex-grow: 1;
+    flex-basis: 50%;
+    padding-left: 5%;
 }
 
-#footer-widget-right
-{
-   padding-right: 1.5%;
-}
-
-.footer-widget-text
+.footer-item-text
 {
     padding: 0;
-    display: table-cell;
-    min-width: 50% !important;
-    width: 50% !important; /* HACK pour Google Chrome */
     line-height: 100%;
+    text-align: justify;
+}
+
+.footer-item-credits
+{
+    padding: 0;
+    line-height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#footer-codeigniter
+{
+    text-align: right;
 }
 
 .footer-title
@@ -1050,74 +1075,20 @@ li
 
 .footer-body
 {
-    padding: 5%;
+    padding-left: 5%;
 }
 
 /*A l'avenir on évite de doubler ce type de ligne, ça rend la lecture impossible...*/
 
 @media screen and (max-width: 1025px)
 {
+    .footer-container
+    {
+        flex-wrap: wrap;
+        align-content: space-around;
+    }
 
-    footer
-{
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top : 2%;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: grey;
-    display: table;
-    font-size: 0.938em;
-    font-family: 'Segoe UI', 'Segoe WP', Tahoma, Arial, sans-serif;
-    
-}
 
-li
-{
-    list-style-type:none;
-}
-
-.footer-row
-{
-    display: table-row;
-}
-
-.footer-widget
-{
-    padding: 1% 0 1% 0;
-    display: table-cell;
-    max-width: 18%;
-   text-shadow: 0px 1px 1px rgba(0, 0, 0, 1);
-}
-
-#footer-widget-left
-{
-   padding-left: 1.5%;
-}
-
-#footer-widget-right
-{
-   padding-right: 1.5%;
-}
-
-.footer-widget-text
-{
-    padding: 1%;
-    line-height: 100%;
-}
-
-.footer-title
-{
-    text-transform: uppercase;
-    padding: 0 0 0 2%;
-    font-weight: bold;
-}
-
-.footer-body
-{
-    padding: 5%;
-}
-    
 }
 /* END FOOTER PART */
 
@@ -1212,3 +1183,133 @@ section article
     }
 }
 /* END COME PART */
+
+/** START CONTACT PART 
+ * @author Adrien PIRONNEAU
+ * @date 18/06/2016
+ * @version 0.1
+*/
+
+#contact
+{
+    color: white;
+    margin: 1.5% 0% 0% 0%;
+	padding: 2%;
+	height: auto;
+	background-color: rgba(0, 0, 0, 0.7);
+    text-align: justify;
+    font-size: 0.930em;
+    font-family: 'Segoe UI', 'Segoe WP', Tahoma, Arial, sans-serif;
+}
+
+.contact-area {
+    width: 60%;
+    padding: 5% 0 5% 0;
+    margin: auto;
+}
+
+.contact-form {
+    position: relative;
+    max-width: calc(0% + 400px);
+    margin: auto;
+    padding: 30px;
+    text-align: center;
+    background: white;
+    box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.3);
+}
+
+.contact-form input {
+    font-family: 'Segoe UI', 'Segoe WP', Tahoma, Arial, sans-serif;
+    font-size: 14px;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 1px;
+    background: ghostwhite;
+    width: 100%;
+    margin: 0 0 15px;
+    padding: 15px;
+    outline: 0;
+}
+
+.contact-form textarea {
+    font-family: 'Segoe UI', 'Segoe WP', Tahoma, Arial, sans-serif;
+    font-size: 14px;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 1px;
+    background: ghostwhite;
+    width: 100%;
+    margin: 0 0 15px;
+    padding: 15px;
+    outline: 0;
+    resize: none;
+}
+
+.contact-form button {
+    font-family: 'Segoe UI', 'Segoe WP', Tahoma, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: overline;
+    width: 100%;
+    border: 0;
+    border-radius: 1px;
+    padding: 15px;
+    color: white;
+    cursor: pointer;
+    outline: 0;
+    background: gray;
+    background-image: -webkit-linear-gradient(135deg, darkslategray 30%, transparent 60%);
+    background-image: -moz-linear-gradient(135deg, darkslategray 30%, transparent 60%);
+    background-image: -o-linear-gradient(135deg, darkslategray 30%, transparent 60%);
+    background-image: linear-gradient(135deg, darkslategray 30%, transparent 60%);
+    background-position: 100%;
+    background-size: 300%;
+    -webkit-transition: background 350ms ease-in-out;
+    -moz-transition: background 350ms ease-in-out;
+    -o-transition: background 350ms ease-in-out;
+    transition: background 350ms ease-in-out;
+}
+.contact-form button:hover, .contact-form button:active, .contact-form button:focus {
+    background-position: 0;
+}
+
+.contact-form .message {
+    margin: 15px 0 0;
+    color: darkgray;
+    font-size: 12px;
+}
+
+.contact-form .message a {
+    color: darkslategray;
+    text-decoration: none;
+}
+
+.button-next-a
+{
+    color: darkslategray;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.contact-form .contact-text-form {
+    display: none;
+}
+
+
+@media screen and (max-width: 1025px)
+{
+    .contact
+    {
+        margin: 1.5% 3% 0% 3%;
+    }
+    
+    .contact-area
+    {
+        width: 90%;
+    }
+}
+
+   
+
+/* END CONTACT PART */

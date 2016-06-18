@@ -54,11 +54,16 @@ class Accueil extends CI_Controller {
                     {
                         $sess_array = $result;
                         $this->session->set_userdata('logged_in', $sess_array);                   
+                        redirect('', 'refresh');
                     }
                 else
                     {
+                        $data=array();
+                        $data['code']=6;            
+                        $this->session->set_flashdata('code', $data);
+                        redirect('accueil/message', 'refresh');
                     }	
-                redirect('', 'refresh');
+                
 	}
         
         public function logout()
@@ -229,6 +234,10 @@ class Accueil extends CI_Controller {
             elseif ($code_erreur==5) 
             {
                 $data['code_erreur']="Erreur, adresse mail inconnue :( <br />" ;
+            }
+            elseif ($code_erreur==6)
+            {
+                $data['code_erreur']="Login ou mdp incorrect :( <br />";
             }
             else
             {

@@ -39,7 +39,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							<ul>
 								<li><?php echo anchor($uri = $url_base."Historique/c1#historique", $title = 'historique')?>
 								<li><?php echo anchor($uri = $url_base."Historique/c1#contact", $title = 'Equipes / Contact')?></li>
-								<li>Sponsors</li>
+								<li><?php echo anchor($uri = $url_base."Historique/c1#slider_sponsors", $title = 'Sponsors')?></li>
 							</ul>
 						</li>
 
@@ -53,13 +53,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 						<li>Infos pratiques
 							<ul>
-								<li>Camping</li>
+								<li><?php echo anchor($uri = $url_base."Infos/access", $title = 'Camping')?></li>
 								<li><?php echo anchor($uri = $url_base."Infos/access", $title = 'Accessibilité')?></li>
 								<li><?php echo anchor($uri = $url_base."Infos/come", $title = 'Venir au Fest\'Esaip')?></li>
 							</ul>
 						</li>
 
-						<li><a href="<?php echo($url_base.'Inscription/afficherFormulaire')?>">S'inscrire / Tickets</a></li>
+						<li><a href="<?php echo($url_base.'Inscription_Ticket/c1')?>">S'inscrire / Tickets</a></li>
 
 						<li id="formulaire_co_js"><?php echo $log_or_not ?>          
                             <ol>
@@ -85,7 +85,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						</li>
 					</ul>
 				</div>
+				<noscript><p id="message_nojava">Bonjour, certaines fonctionnalités avancées (ou pas) de ce site nécessitent Javascript <br /> Vous ne pourrez par exemple pas changer de mdp, pourquoi ? Aucune raison particulière... Vous pouvez le faire en allant sur cette page : "parametre/c1". Ah oui, et certaines redirections automatiques ne vont pas fonctionner, mais vous l'aurez bloqué aussi si vous avez désactivé js.</p></noscript>
 			</nav>
 
 <script src="http://code.jquery.com/jquery-3.0.0.js"   integrity="sha256-jrPLZ+8vDxt2FnE1zvZXCkCcebI/C8Dt5xyaQBjxQIo="   crossorigin="anonymous"></script>
 <script src="<?php echo($url_base.'/assets/script/header.js')?>"></script>
+<script src="<?php echo($url_base.'/assets/script/Ancien_nav.js')?>"></script>
