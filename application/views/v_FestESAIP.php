@@ -102,7 +102,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <h3 id="contact">Equipe/contact</h3>
         <br>
         <ul>
-            <li class="espace">Chef supreme : Paul Tregouet</li>
+            <li class="espace">Chef supreme : Le sous-fifre.</li>
             <li class="espace">Sous chef : Antoine Richard</li>
             <li class="espace">Brute : Nathan Hardi</li>
             <li class="espace">Enfant perdu : Adrien Pironneau</li>

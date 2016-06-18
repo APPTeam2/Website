@@ -45,9 +45,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 						<li>Programmation
 							<ul>
-								<li>Animations</li>
-								<li>Stands</li>
-								<li>Concerts</li>
+								<li><?php echo anchor($uri = $url_base."Programmation/c_prog#animations", $title = 'Animations')?>
+								<li><?php echo anchor($uri = $url_base."Programmation/c_prog#stands", $title = 'Stands')?></li>
+                                <li><?php echo anchor($uri = $url_base."Programmation/c_prog#concerts", $title = 'Concerts')?></li>
 							</ul>
 						</li>
 
