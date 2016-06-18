@@ -22,12 +22,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <input type="text" placeholder="Title"/>
                 <textarea name="comment" form="usrform" placeholder="Enter text here..." rows='10'></textarea>
                 <button>Send</button>
-                <p class="message">Do you need to edit? <a class="button-next button-next-a" href="#">Previous</a></p>
+                <p class="message">Do you need to edit? <a class="button-next button-next-a">Previous</a></p>
             </form>
             <form class="contact-login-form">
                 <input type="text" placeholder="Username"/>
                 <input type="email" placeholder="Email address"/>
-                <button class="button-next" href="#">Next</button>
+                <button class="button-next">Next</button>
             </form>
         </div>
     </div>

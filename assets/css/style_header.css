@@ -1048,6 +1048,7 @@ section article
 {
     color: darkslategray;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .contact-form .contact-text-form {

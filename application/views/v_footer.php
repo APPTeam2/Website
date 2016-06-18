@@ -53,7 +53,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
         <div class="footer-item-credits">
             <div id="footer-contact">
-                <?php echo anchor($uri = $url_base."Contact/formulaire#", $title = 'Contactez-nous')?>
+                <?php echo anchor($uri = $url_base."Contact/formulaire", $title = 'Contactez-nous')?>
             </div>
             <div id="footer-codeigniter">
                 Page rendered in <strong>{elapsed_time}</strong> seconds.<br>
