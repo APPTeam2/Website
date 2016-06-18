@@ -12,12 +12,9 @@ function formulaire() {
     $formulaire_login.show();
 
 
-    $login=$('ol');
+    $login=$('#menu>li>ol');
+
     $login.hide();
-
-    $nav=$('#texte_titre');
-    $nav.after("");
-
 
 
     $formulaire_login.on
