@@ -128,17 +128,7 @@ h1
 	color:red;
 }
 
-/*Nathan*/
-h3
-{
-	color: yellow;
-	font-size: 175%;
-	text-align: center;
-	font-weight: normal;
-	font-style: oblique;
-	text-decoration: none;
-	margin: 1% 0% 0% 0%;
-}
+
 /*FLO*/
 h4{
 	font-size : 130%;
@@ -284,7 +274,8 @@ a, a:active
 	    left: auto;
 	    
 	    background-color: rgba(0, 0, 0, 0.9);
-	    width: 160px;
+	    width: 150px;
+	    border-radius: 10px;
 	}
 
 	#menu li:hover ol {
@@ -305,165 +296,321 @@ a, a:active
 	}
 
 		/* 
-		Fin Antoine GUILLOT
-		Nathan*/
-	section aside
-	{	
-		margin: 1.5% 0% 0% 0%;
-		height: auto;
-		background-color: rgba(0, 0, 0, 0.7);
-	}
+		Fin Antoine GUILLOT*/
 
-	section div
+	/* Début code Nathan */
+        
+        .h3_accueil
+        {
+            color: #FFDD00;
+            font-size: 175%;
+            text-align: center;
+            font-weight: bold;
+            font-style: normal;
+            font-family: Raavi;
+            text-decoration: none;
+            margin: 1% 0% 0% 0%;
+        }
+        
+        h3, .h3_sponsors
+        {
+            color: #FFDD00;
+            font-size: 175%;
+            text-align: center;
+            font-weight: bold;
+            font-style: normal;
+            font-family: Raavi;
+            text-decoration: none;
+            margin: 0% 0% 0% 0%;
+        }
+        
+        /*___View Accueil___*/
+        
+	section aside#slider_artistes, section aside#slider_sponsors
 	{	
-		margin: 1.5% 0% 0% 0%;
-		padding: 0.5% 0% 1.5% 0%;
-		height: auto;
-		background-color: rgba(0, 0, 0, 0.7);
+            margin: 1.5% 0% 1.5% 0%;
+            padding: 1% 0% 1% 0%;
+            height: auto;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        section article#presentation
+        {	
+            margin: 1.5% 0% 0% 0%;
+            padding: 0.5% 0% 1.5% 0%;
+            height: auto;
+            background-color: rgba(0, 0, 0, 0.7);
 	}
 	
-	section div p{
-		color: white;
-		font-size: 115%;
-		text-align:justify;
-		padding: 1.5% 5% 0% 5%;
-	}
-	
-	#body_flexbox{
-	
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		align-items: space-between;
-	}
-	
-	figure#artistes{
-		display: flex;
-		flex-direction: row;
-		flex-wrap: nowrap;
-		justify-content: flex-start;
-		align-items: center;
-	}
+	section article#presentation p{
+            color: white;
+            font-size: 115%;
+            text-align: justify;
+            padding: 1.5% 5% 0% 5%;
+        }
+
+        figure#artistes{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            align-items: center;
+        }
 	
 	@keyframes slidy_artistes
 	{
-		0% { left: 0%; }
-		11% { left: 0%; }
-		16% { left: -33.3333%; }
-		27% { left: -33.3333%; }
-		32% { left: -66.6666%; }
-		43% { left: -66.6666%; }
-		48% { left: -100%; }
-		60% { left: -100%; }
-		65% { left: -133.3333%; }
-		79% { left: -133.3333%; }
-		85% { left: -166.6666%; }
-		95% { left: -166.6666%; }
-		100% { left: -200%;}	
+            0% { left: 0%; }
+            11% { left: 0%; }
+            16% { left: -33.3333%; }
+            27% { left: -33.3333%; }
+            32% { left: -66.6666%; }
+            43% { left: -66.6666%; }
+            48% { left: -100%; }
+            60% { left: -100%; }
+            65% { left: -133.3333%; }
+            79% { left: -133.3333%; }
+            85% { left: -166.6666%; }
+            95% { left: -166.6666%; }
+            100% { left: -200%;}	
 	}
 
 	aside#slider_artistes { overflow: hidden; }
 	
 	aside#slider_artistes figure p
 	{ 
-		width: 100%;
-		float: left;
-		font-size: 250%;
+            width: 100%;
+            float: left;
+            font-size: 250%;
 	}
 
-	aside#slider_artistes figure { 
-	position: relative;
-	width: 300%; /* 100*nb_images/nb_images_par_slide% */
-	margin: 0;
-	text-align: center;
-	animation: 15s slidy_artistes infinite; 
+	aside#slider_artistes figure 
+	{ 
+            position: relative;
+            width: 300%; /* 100*nb_images/nb_images_par_slide% */
+            text-align: center;
+            margin: -2% 0% -1% 0%;
+            animation: 15s slidy_artistes infinite; 
+	}
+        
+        /*___View Sponsors___*/
+	
+	.small_image, .image_mobile
+	{
+            width: 100px;
+            height: 60px;
 	}
 	
-	.small_image{
-		width: 100px;
-		height: 60px;		
-	}
-	figure#sponsors{
-		display: flex;
-		flex-direction: row;
-		flex-wrap: nowrap;
-		justify-content: space-around;
-		align-items: center;
-		padding: 2% 0% 2% 0%;
+	figure#sponsors
+	{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+            align-items: center;
 	}
 	
 	@keyframes slidy_sponsors
 	{
-		0% { left: 0%; } 1% { left: -2%; } 2% { left: -4%; } 3% { left: -6%; } 4% { left: -8%; }
-		5% { left: -10%; } 6% { left: -12%; } 7% { left: -14%; } 8% { left: -16%; } 9% { left: -18%; }
-		10% { left: -20%; } 11% { left: -22%; } 12% { left: -24%; } 13% { left: -26%; } 14% { left: -28%; }
-		15% { left: -30%; } 16% { left: -32%; } 17% { left: -34%; } 18% { left: -36%; } 19% { left: -38%; }
-		20% { left: -40%; } 21% { left: -42%; } 22% { left: -44%; } 23% { left: -46%; } 24% { left: -48%; }
-		25% { left: -50%; } 26% { left: -52%; } 27% { left: -54%; } 28% { left: -56%; } 29% { left: -58%; }
-		30% { left: -60%; } 31% { left: -62%; } 32% { left: -64%; } 33% { left: -66%; } 34% { left: -68%; }
-		35% { left: -70%; } 36% { left: -72%; } 37% { left: -74%; } 38% { left: -76%; } 39% { left: -78%; }
-		40% { left: -80%; } 41% { left: -82%; } 42% { left: -84%; } 43% { left: -86%; } 44% { left: -88%; }
-		45% { left: -90%; } 46% { left: -92%; } 47% { left: -94%; } 48% { left: -96%; } 49% { left: -98%; }
-		50% { left: -100%; } 51% { left: -98%; } 52% { left: -96%; } 53% { left: -94%; } 54% { left: -92%; }
-		55% { left: -90%; } 56% { left: -88%; } 57% { left: -86%; } 58% { left: -84%; } 59% { left: -82%; }
-		60% { left: -80%; } 61% { left: -78%; } 62% { left: -76%; } 63% { left: -74%; } 64% { left: -72%; }
-		65% { left: -70%; } 66% { left: -68%; } 67% { left: -66%; } 68% { left: -64%; } 69% { left: -62%; }
-		70% { left: -60%; } 71% { left: -58%; } 72% { left: -56%; } 73% { left: -54%; } 74% { left: -52%; }
-		75% { left: -50%; } 76% { left: -48%; } 77% { left: -46%; } 78% { left: -44%; } 79% { left: -42%; }
-		80% { left: -40%; } 81% { left: -38%; } 82% { left: -36%; } 83% { left: -34%; } 84% { left: -32%; }
-		85% { left: -30%; } 86% { left: -28%; } 87% { left: -26%; } 88% { left: -24%; } 89% { left: -22%; }
-		90% { left: -20%; } 91% { left: -18%; } 92% { left: -16%; } 93% { left: -14%; } 94% { left: -12%; }
-		95% { left: -10%; } 96% { left: -8%; } 97% { left: -6%; } 98% { left: -4%; } 99% { left: -2%; }
-		100% { left: 0%; }
+            0% { left: 0%; } 0.5% { left: -1%; } 1% { left: -2%; } 1.5% { left: -3%; } 2% { left: -4%; } 2.5% { left: -5%; } 3% { left: -6%; } 3.5% { left: -7%; } 4% { left: -8%; } 4.5% { left: -9%; } 
+            5% { left: -10%; } 5.5% { left: -11%; } 6% { left: -12%; } 6.5% { left: -13%; } 7% { left: -14%; } 7.5% { left: -15%; } 8% { left: -16%; } 8.5% { left: -17%; } 9% { left: -18%; } 9.5% { left: -19%; }
+            10% { left: -20%; } 10.5% { left: -21%; } 11% { left: -22%; } 11.5% { left: -23%; } 12% { left: -24%; } 12.5% { left: -25%; } 13% { left: -26%; } 13.5% { left: -27%; } 14% { left: -28%; } 14.5% { left: -29%; }
+            15% { left: -30%; } 15.5% { left: -31%; } 16% { left: -32%; } 16.5% { left: -33%; } 17% { left: -34%; } 17.5% { left: -35%; } 18% { left: -36%; } 18.5% { left: -37%; } 19% { left: -38%; } 19.5% { left: -39%; }
+            20% { left: -40%; } 20.5% { left: -41%; } 21% { left: -42%; } 21.5% { left: -43%; } 22% { left: -44%; } 22.5% { left: -45%; } 23% { left: -46%; } 23.5% { left: -47%; } 24% { left: -48%; } 24.5% { left: -49%; }
+            25% { left: -50%; } 25.5% { left: -51%; } 26% { left: -52%; } 26.5% { left: -53%; } 27% { left: -54%; } 27.5% { left: -55%; } 28% { left: -56%; } 28.5% { left: -57%; } 29% { left: -58%; } 29.5% { left: -59%; }
+            30% { left: -60%; } 30.5% { left: -61%; } 31% { left: -62%; } 31.5% { left: -63%; } 32% { left: -64%; } 32.5% { left: -65%; } 33% { left: -66%; } 33.5% { left: -67%; } 34% { left: -68%; } 34.5% { left: -69%; }
+            35% { left: -70%; } 35.5% { left: -71%; } 36% { left: -72%; } 36.5% { left: -73%; } 37% { left: -74%; } 37.5% { left: -75%; } 38% { left: -76%; } 38.5% { left: -77%; } 39% { left: -78%; } 39.5% { left: -79%; }
+            40% { left: -80%; } 40.5% { left: -81%; } 41% { left: -82%; } 41.5% { left: -83%; } 42% { left: -84%; } 42.5% { left: -85%; } 43% { left: -86%; } 43.5% { left: -87%; } 44% { left: -88%; } 44.5% { left: -89%; }
+            45% { left: -90%; } 45.5% { left: -91%; } 46% { left: -92%; } 46.5% { left: -93%; } 47% { left: -94%; } 47.5% { left: -95%; } 48% { left: -96%; } 48.5% { left: -97%; } 49% { left: -98%; } 49.5% { left: -99%; }
+            50% { left: -100%; } 50.5% { left: -99%; } 51% { left: -98%; } 51.5% { left: -97%; } 52% { left: -96%; } 52.5% { left: -95%;}  53% { left: -94%; } 53.5% { left: -93%; } 54% { left: -92%; } 54.5% { left: -91%;}
+            55% { left: -90%; } 55.5% { left: -89%;} 56% { left: -88%; } 56.5% { left: -87%;} 57% { left: -86%; } 57.5% { left: -85%;} 58% { left: -84%; } 58.5% { left: -83%;} 59% { left: -82%; } 59.5% { left: -81%;}
+            60% { left: -80%; } 60.5% { left: -79%;} 61% { left: -78%; } 61.5% { left: -77%;} 62% { left: -76%; } 62.5% { left: -75%;} 63% { left: -74%; } 63.5% { left: -73%;} 64% { left: -72%; } 64.5% { left: -71%;}
+            65% { left: -70%; } 65.5% { left: -69%;} 66% { left: -68%; } 66.5% { left: -67%;} 67% { left: -66%; } 67.5% { left: -65%;} 68% { left: -64%; } 68.5% { left: -63%;} 69% { left: -62%; } 69.5% { left: -61%;}
+            70% { left: -60%; } 70.5% { left: -59%;} 71% { left: -58%; } 71.5% { left: -57%;} 72% { left: -56%; } 72.5% { left: -55%;} 73% { left: -54%; } 73.5% { left: -53%;} 74% { left: -52%; } 74.5% { left: -51%;}
+            75% { left: -50%; } 75.5% { left: -49%;} 76% { left: -48%; } 76.5% { left: -47%;} 77% { left: -46%; } 77.5% { left: -45%;} 78% { left: -44%; } 78.5% { left: -43%;} 79% { left: -42%; } 79.5% { left: -41%;}
+            80% { left: -40%; } 80.5% { left: -39%;} 81% { left: -38%; } 81.5% { left: -37%;} 82% { left: -36%; } 82.5% { left: -35%;} 83% { left: -34%; } 83.5% { left: -33%;} 84% { left: -32%; } 84.5% { left: -31%;}
+            85% { left: -30%; } 85.5% { left: -29%;} 86% { left: -28%; } 86.5% { left: -27%;} 87% { left: -26%; } 87.5% { left: -25%;} 88% { left: -24%; } 88.5% { left: -23%;} 89% { left: -22%; } 89.5% { left: -21%;}
+            90% { left: -20%; } 90.5% { left: -19%;} 91% { left: -18%; } 91.5% { left: -17%;} 92% { left: -16%; } 92.5% { left: -15%;} 93% { left: -14%; } 93.5% { left: -13%;} 94% { left: -12%; } 94.5% { left: -11%;}
+            95% { left: -10%; } 95.5% { left: -9%;} 96% { left: -8%; } 96.5% { left: -7%;} 97% { left: -6%; } 97.5% { left: -5%;} 98% { left: -4%; } 98.5% { left: -3%;} 99% { left: -2%; } 99.5% { left: -1%;}
+            100% { left: 0%; }
 	}
 
 	aside#slider_sponsors { overflow: hidden; }
 
 	aside#slider_sponsors figure
 	{ 
-		position: relative;
-		width: 200%; /* 100*nb_images/nb_images_par_slide% */
-		margin: 0;
-		animation: 15s slidy_sponsors infinite; 
+            position: relative;
+            width: 200%; /* 100*nb_images/nb_images_par_slide% */
+            margin: 1% 0% 2% 0%;
+            animation: 15s slidy_sponsors infinite;
 	}
-
-
-	/* ENF NATHAN
-	   START FestEsaip (Flor)*/
-	table 
-	{ 
-		margin: auto;
-	    border-collapse: collapse;
-		width: 100%
-	}
+        
+        /*___View Programmation___*/
+        
+        section#programmation
+        {
+            font-size: 105%;
+            color: white;
+        }
+        
+        .h3_programmation
+        {
+            color: #FFDD00;
+            font-size: 175%;
+            text-align: center;
+            font-weight: bold;
+            font-style: normal;
+            font-family: Raavi;
+            text-decoration: none;
+            margin: 0% 0% 0% 0%;
+        }
+        
+        section article#animations p, section article#stands p, section article#concerts p 
+        {
+            text-align: center;
+        }
+        
+        section article#animations , section article#stands , section article#concerts 
+        {
+            padding: 1% 3% 1% 3%;
+        }
+        
+        section article#animations div, section article#stands div, section article#concerts div
+        {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        section article#concerts div table#tab_concerts tbody tr:hover
+        {
+            font-size: 115%;
+            color: #FFE07A;
+            cursor: default;
+        }
+        
+        section article#concerts div table#tab_concerts thead
+        {
+            font-size: 120%;
+            color: #FFDD00;
+            text-align: center;
+            font-weight: bold;
+            font-style: normal;
+            font-family: Raavi;
+        }
+        
+        section article#concerts div table#tab_concerts td
+        {
+            width: 10%;
+        }
+        section article#concerts div table#tab_concerts td
+        {
+             font-size: 110%;
+             text-align: center;
+             padding: 0.5% 0% 0.5% 0%;
+        }
+        
+        ul.liste_animations_stands_concerts
+        {
+            font-size: 120%;
+            width: 100%;
+            padding: 0% 0% 0% 15%;
+        }
+        
+        /*___View Tickets___*/
+        
+        div#tickets
+        {
+            background-color: rgba(0, 0, 0, 0.7);
+            margin: 2% 0% 0% 0%;
+            padding: 1% 3% 1% 3%;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            text-align: center;
+            color: white;
+        }
+       
+        
+        div#tickets fieldset#acheter_tickets
+        {
+            width: 40%;
+        }
+        
+        div#tickets fieldset#acheter_tickets legend
+        {
+            font-size: 150%;
+            color: #FFDD00;
+            text-align: center;
+            font-weight: bold;
+            font-style: normal;
+            font-family: Raavi;
+        }
+        
+        div#tickets fieldset#acheter_tickets label
+        {
+            font-size: 100%;
+            color: white;
+            text-align: center;
+            font-style: normal;
+            font-family: Calibri;
+            float: left;
+        }
+        
+        div#tickets fieldset#acheter_tickets input
+        {
+            font-size: 100%;
+            color: white;
+            text-align: center;
+            font-style: normal;
+            font-family: Calibri;
+            float: right;
+        }
+        
+        
+        
+	/* Fin code Nathan */
 	
-	th{
-		 border-top : 1px solid;	
-		 border-bottom :  1px solid;
-	}
-	
-	tr:hover{background-color:rgba(0, 0, 0, 0.5)}
-	
-	.anonce
-	{
-		text-align: center;
-		font-size :150%;
-		font-style: bold;
-		color : #009900;	
+	 /*START FestEsaip (Flor)*/
+     table
+     { 
+         margin: auto;
+         border-collapse: collapse;
+         width: 100%
+     }
 
-	}
+     th{
+         border-top : 1px solid;	
+         border-bottom :  1px solid;
+     }
 
-	.espace{
-		font-size :130%;
-		margin: 10px 0;
-		list-style-position: inside;
-		text-align: center;
-	}
+     tr:hover{background-color:rgba(0, 0, 0, 0.5)}
 
-	.FestEsaip
-	{
-		color:white;
-	}
+     .anonce
+     {
+         text-align: center;
+         font-size :150%;
+         font-style: bold;
+         color : #009900;	
+
+     }
+
+     .espace{
+         font-size :130%;
+         margin: 10px 0;
+         list-style-position: inside;
+         text-align: center;
+     }
+
+     .FestEsaip
+     {
+         color:white;
+         background-color: rgba(0, 0, 0, 0.7);
+         margin: 1.5% 0% 1.5% 0%;
+     }
 
 /*END FLOR*/
 
@@ -543,131 +690,203 @@ a, a:active
 	
 		/* 
 		Fin Antoine GUILLOT
-		Nathan*/
-	section aside
-	{	
-		margin: 1.5% 3% 0% 3%;
-		height: auto;
-		background-color: rgba(0, 0, 0, 0.7);
-	}
+		*/
 
-	section div
-	{	
-		margin: 1.5% 3% 0% 3%;
-		padding: 0.5% 0% 1.5% 0%;
-		height: auto;
-		background-color: rgba(0, 0, 0, 0.7);
-	}
-	
-	section div p{
-		color: white;
-		font-size: 115%;
-		text-align:justify;
-		padding: 1.5% 5% 0% 5%;
-	}
-	
-	#body_flexbox{
-	
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		align-items: space-between;
-	}
-	
-	figure#artistes{
-		display: flex;
-		flex-direction: row;
-		flex-wrap: nowrap;
-		justify-content: flex-start;
-		align-items: center;
-	}
-	
-	@keyframes slidy_artistes
-	{
-		0% { left: 0%; }
-		11% { left: 0%; }
-		16% { left: -33.3333%; }
-		27% { left: -33.3333%; }
-		32% { left: -66.6666%; }
-		43% { left: -66.6666%; }
-		48% { left: -100%; }
-		60% { left: -100%; }
-		65% { left: -133.3333%; }
-		79% { left: -133.3333%; }
-		85% { left: -166.6666%; }
-		95% { left: -166.6666%; }
-		100% { left: -200%;}	
-	}
+/* Début code Nathan */
+    
+    .h3_accueil
+    {
+        color: #FFDD00;
+        font-size: 175%;
+        text-align: center;
+        font-weight: bold;
+        font-style: normal;
+        font-family: Raavi;
+        text-decoration: none;
+        margin: 1% 0% 0% 0%;
+    }
+    
+    .h3_sponsors
+    {
+        color: #FFDD00;
+        font-size: 175%;
+        text-align: center;
+        font-weight: bold;
+        font-style: normal;
+        font-family: Raavi;
+        text-decoration: none;
+        margin: 0% 0% 0% 0%;
+    }
+    
+    section
+{
+        width: calc(100% - 130px); 
+        margin: 1.5% 3% 1.5% 3%;
+}
+    
+    /*___View Accueil___*/
+    
+section aside
+{	
+	margin: 1.5% 0% 0% 0%;
+	height: auto;
+	background-color: rgba(0, 0, 0, 0.7);
+}
 
-	aside#slider_artistes { overflow: hidden; }
-	
-	aside#slider_artistes figure p
-	{ 
-		width: 100%;
-		float: left;
-		font-size: 250%;
-	}
+section article#presentation
+{	
+	margin: 1.5% 0% 0% 0%;
+	padding: 0.5% 0% 1.5% 0%;
+	height: auto;
+}
 
-	aside#slider_artistes figure { 
-	position: relative;
-	width: 300%; /* 100*nb_images/nb_images_par_slide% */
-	margin: 0;
+section article#presentation p
+{
+	color: white;
+	font-size: 115%;
+	text-align: justify;
+	padding: 1.5% 5% 0% 5%;
+}
+
+aside figure#artistes
+{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	font-size: 100%;
+	margin: 0% 1% 0% 1%;
 	text-align: center;
-	animation: 15s slidy_artistes infinite; 
-	}
+}
 	
-	.small_image{
-		width: 100px;
-		height: 60px;		
-	}
-	figure#sponsors{
-		display: flex;
-		flex-direction: row;
-		flex-wrap: nowrap;
-		justify-content: space-around;
-		align-items: center;
-		padding: 2% 0% 2% 0%;
-	}
-	
-	@keyframes slidy_sponsors
-	{
-		0% { left: 0%; } 1% { left: -2%; } 2% { left: -4%; } 3% { left: -6%; } 4% { left: -8%; }
-		5% { left: -10%; } 6% { left: -12%; } 7% { left: -14%; } 8% { left: -16%; } 9% { left: -18%; }
-		10% { left: -20%; } 11% { left: -22%; } 12% { left: -24%; } 13% { left: -26%; } 14% { left: -28%; }
-		15% { left: -30%; } 16% { left: -32%; } 17% { left: -34%; } 18% { left: -36%; } 19% { left: -38%; }
-		20% { left: -40%; } 21% { left: -42%; } 22% { left: -44%; } 23% { left: -46%; } 24% { left: -48%; }
-		25% { left: -50%; } 26% { left: -52%; } 27% { left: -54%; } 28% { left: -56%; } 29% { left: -58%; }
-		30% { left: -60%; } 31% { left: -62%; } 32% { left: -64%; } 33% { left: -66%; } 34% { left: -68%; }
-		35% { left: -70%; } 36% { left: -72%; } 37% { left: -74%; } 38% { left: -76%; } 39% { left: -78%; }
-		40% { left: -80%; } 41% { left: -82%; } 42% { left: -84%; } 43% { left: -86%; } 44% { left: -88%; }
-		45% { left: -90%; } 46% { left: -92%; } 47% { left: -94%; } 48% { left: -96%; } 49% { left: -98%; }
-		50% { left: -100%; } 51% { left: -98%; } 52% { left: -96%; } 53% { left: -94%; } 54% { left: -92%; }
-		55% { left: -90%; } 56% { left: -88%; } 57% { left: -86%; } 58% { left: -84%; } 59% { left: -82%; }
-		60% { left: -80%; } 61% { left: -78%; } 62% { left: -76%; } 63% { left: -74%; } 64% { left: -72%; }
-		65% { left: -70%; } 66% { left: -68%; } 67% { left: -66%; } 68% { left: -64%; } 69% { left: -62%; }
-		70% { left: -60%; } 71% { left: -58%; } 72% { left: -56%; } 73% { left: -54%; } 74% { left: -52%; }
-		75% { left: -50%; } 76% { left: -48%; } 77% { left: -46%; } 78% { left: -44%; } 79% { left: -42%; }
-		80% { left: -40%; } 81% { left: -38%; } 82% { left: -36%; } 83% { left: -34%; } 84% { left: -32%; }
-		85% { left: -30%; } 86% { left: -28%; } 87% { left: -26%; } 88% { left: -24%; } 89% { left: -22%; }
-		90% { left: -20%; } 91% { left: -18%; } 92% { left: -16%; } 93% { left: -14%; } 94% { left: -12%; }
-		95% { left: -10%; } 96% { left: -8%; } 97% { left: -6%; } 98% { left: -4%; } 99% { left: -2%; }
-		100% { left: 0%; }
-	}
+aside figure img.image_mobile, aside figure p.artistes_mobile
+{
+	display: none;
+}
 
-	aside#slider_sponsors { overflow: hidden; }
+    /*___View Sponsors*/
+    
+.small_image
+{
+	width: 55px;
+	height: 40px;		
+}
 
-	aside#slider_sponsors figure
-	{ 
-		position: relative;
-		width: 200%; /* 100*nb_images/nb_images_par_slide% */
-		margin: 0;
-		animation: 15s slidy_sponsors infinite; 
-	}
-	
-	section
-	{
-		width: calc(100% - 130px); /*Merci Antoine pour les pixels. Pensez au 'calc'!*/
-	}
+aside#slider_sponsors { overflow: hidden; }
+
+figure#sponsors
+{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: center;
+}
+    
+    /*___View Programmation___*/
+
+    .h3_programmation
+    {
+        color: #FFDD00;
+        font-size: 175%;
+        text-align: center;
+        font-weight: bold;
+        font-style: normal;
+        font-family: Raavi;
+        text-decoration: none;
+        margin: 0% 0% 0% 0%;
+    }
+    
+    section#programmation
+    {
+        font-size: 105%;
+        color: white;
+    }
+    
+    .h3_programmation
+    {
+        color: #FFDD00;
+        font-size: 175%;
+        text-align: center;
+        font-weight: bold;
+        font-style: normal;
+        font-family: Raavi;
+        text-decoration: none;
+        margin: 0% 0% 0% 0%;
+    }
+    
+    article#animations p, article#stands p, article#concerts p 
+    {
+        text-align: center;
+    }
+    
+    section article#animations , article#stands , article#concerts 
+    {
+        padding: 1% 3% 1% 3%;
+    }
+    
+    article#animations div, article#stands div, article#concerts div
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    article#concerts div table#tab_concerts tbody tr
+    {
+        font-size: 100%;
+        border-bottom: 1px solid #FFDD00;
+        border-top: 1px solid #FFDD00;
+    }
+    
+    article#concerts div table#tab_concerts thead
+    {
+        font-size: 120%;
+        color: #FFDD00;
+        text-align: center;
+        font-weight: bold;
+        font-style: normal;
+        font-family: Raavi;
+    }
+    
+    article#concerts div table#tab_concerts td
+    {
+        width: 10%;
+    }
+    
+    article#concerts div table#tab_concerts td
+    {
+         font-size: 110%;
+         text-align: center;
+         padding: 0.5% 0% 0.5% 0%;
+    }
+    
+    ul.liste_animations_stands_concerts
+    {
+        padding: 0% 0% 0% 15%;
+        font-size: 120%;
+        width: 100%;
+    }
+    
+    /*___View Tickets___*/
+    
+    div.tickets
+    {
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+    
+    div.tickets p
+    {
+        color: white;
+        font-size: 100%
+        text-align center;            
+    }
+        
+        
+        
+        
+	/* Fin code Nathan */
 	
 	    /* Début Formulaire inscription Antoine RICHARD */
     
@@ -760,7 +979,10 @@ a, a:active
 	.FestEsaip
 	{
 		color:white;
-	}           
+                background-color: rgba(0, 0, 0, 0.7);
+                margin: 1.5% 3% 1.5% 3%;
+                
+	}                    
 }
 
 /** START FOOTER PART 
@@ -831,6 +1053,7 @@ li
     padding: 5%;
 }
 
+/*A l'avenir on évite de doubler ce type de ligne, ça rend la lecture impossible...*/
 
 @media screen and (max-width: 1025px)
 {
