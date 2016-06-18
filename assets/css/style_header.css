@@ -28,6 +28,15 @@
  * @date 08/06/16
  * @version 1
  */
+
+#message_nojava
+{
+    color: white;
+    text-align: center;
+    font-family: Impact;
+    font-size: 120%;
+}
+
 body
 {
 	min-width: 500px;

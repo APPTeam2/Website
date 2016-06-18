@@ -85,7 +85,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						</li>
 					</ul>
 				</div>
+				<noscript><p id="message_nojava">Bonjour, certaines fonctionnalités avancées (ou pas) de ce site nécessitent Javascript <br /> Vous ne pourrez par exemple pas changer de mdp, pourquoi ? Aucune raison particulière... Vous pouvez le faire en allant sur cette page : "parametre/c1". Ah oui, et certaines redirections automatiques ne vont pas fonctionner, mais vous l'aurez bloqué aussi si vous avez désactivé js.</p></noscript>
 			</nav>
 
 <script src="http://code.jquery.com/jquery-3.0.0.js"   integrity="sha256-jrPLZ+8vDxt2FnE1zvZXCkCcebI/C8Dt5xyaQBjxQIo="   crossorigin="anonymous"></script>
 <script src="<?php echo($url_base.'/assets/script/header.js')?>"></script>
+<script src="<?php echo($url_base.'/assets/script/Ancien_nav.js')?>"></script>
