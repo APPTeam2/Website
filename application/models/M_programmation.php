@@ -18,7 +18,7 @@ Class M_programmation extends CI_Model {
                             DATE_FORMAT(concert.heureDebut, '%H : %i') AS `heureDebut` 
                     FROM 
                             festival 
-                                    INNER JOIN CONCERT 
+                                    INNER JOIN concert
                                             ON concert.idFestival=festival.idFestival 
                                     INNER JOIN jouer
                                             ON concert.idConcert=jouer.idConcert 
