@@ -22,7 +22,7 @@ function redirection()
 
 function wait()
 {
-  setTimeout(redirection, 2000); 
+  setTimeout(redirection, 3000); 
 }
 
 

@@ -39,7 +39,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							<ul>
 								<li><?php echo anchor($uri = $url_base."Historique/c1#historique", $title = 'historique')?>
 								<li><?php echo anchor($uri = $url_base."Historique/c1#contact", $title = 'Equipes / Contact')?></li>
-								<li>Sponsors</li>
+								<li><?php echo anchor($uri = $url_base."Historique/c1#slider_sponsors", $title = 'Sponsors')?></li>
 							</ul>
 						</li>
 
@@ -53,7 +53,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 						<li>Infos pratiques
 							<ul>
-								<li>Camping</li>
+								<li><?php echo anchor($uri = $url_base."Infos/access", $title = 'Camping')?></li>
 								<li><?php echo anchor($uri = $url_base."Infos/access", $title = 'Accessibilité')?></li>
 								<li><?php echo anchor($uri = $url_base."Infos/come", $title = 'Venir au Fest\'Esaip')?></li>
 							</ul>

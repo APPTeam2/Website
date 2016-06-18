@@ -39,7 +39,7 @@ class Historique extends CI_Controller
             }
             $data['T_historique']=$tableau; 
             $this->load->view('v_FestESAIP', $data);
-            
+            $this->load->view('v_sponsors'); 
 	        $this->load->view('v_footer');            
         }
 }

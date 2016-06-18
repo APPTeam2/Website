@@ -109,6 +109,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <li class="espace">Mascotte : Florian Levenez-Delafontaine</li>
             <li class="espace">Sous-fifre : Antoine Guillot</li>
         </ul> 
-        <p class="espace">Nous contacter : <a href="mailto:FestESAIP.contact@esaip.org">FestESAIP.contact@esaip.org</a> </p>
+        <p class="espace">Nous contacter : <a href="mailto:FestESAIP.contact@esaip.org"><br />FestESAIP.contact@esaip.org</a> <br /> <?php echo anchor($uri = $url_base."Contact/formulaire#", $title = 'Formulaire en ligne')?></p>
     </div>
 </section>
