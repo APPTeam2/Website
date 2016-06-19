@@ -14,6 +14,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <p>Ici vous pouvez acheter votre ticket pour 1 jour, 2 jours (necessité
         d'acheter deux ticket d'un jour) ou prendre la formule Full, 3 en 1, Méga
         Giga, Tera, Supra Festival pour les trois jours consécutifs.
+        <br/>Veuillez renseigner les champs ci-dessous et le billet que vous avez choisi
+        vous sera envoyé sur votre boite mail correspondant à  l'adresse que vous avez renseigné
+        lors de votre inscription.
         </p>
 
         <form method="post" action="<?php echo($url_base.'Inscription_Ticket/valider_ticket')?>">
@@ -38,5 +41,5 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </form>
     </div>
 </section>
-    
+
 
