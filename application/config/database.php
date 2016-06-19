@@ -74,12 +74,11 @@ $active_group = 'default';
 $query_builder = TRUE;
 
 $db['default'] = array(
-	'dsn'   => 'mysql:host=localhost;dbname=festesaip',
-	//'hostname' => 'localhost',
+	'dsn'   => 'mysql:host=localhost;dbname=fest3',
 	'hostname' => 'mysql:host=localhost',
 	'username' => 'root',
 	'password' => '',
-	'database' => 'test',
+	'database' => 'fest3',
 	'dbdriver' => 'pdo',
 	'dbprefix' => '',
 	'pconnect' => TRUE,
@@ -95,3 +94,27 @@ $db['default'] = array(
 	'failover' => array(),
 	'save_queries' => TRUE
 );
+
+/*
+$db['default'] = array(
+	'dsn'   => 'mysql:host=localhost;dbname=projet-ir8',
+	'hostname' => 'mysql:host=localhost',
+	'username' => 'projet-ir8',
+	'password' => 'Esaip-2016',
+	'database' => 'projet-ir8',
+	'dbdriver' => 'pdo',
+	'dbprefix' => '',
+	'pconnect' => TRUE,
+	'db_debug' => TRUE,
+	'cache_on' => FALSE,
+	'cachedir' => '',
+	'char_set' => 'utf8',
+	'dbcollat' => 'utf8_general_ci',
+	'swap_pre' => '',
+	'encrypt' => FALSE,
+	'compress' => FALSE,
+	'stricton' => FALSE,
+	'failover' => array(),
+	'save_queries' => TRUE
+);
+*/

@@ -24,6 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 $config['base_url'] = 'http://localhost/Team2/Website/';
+//$config['base_url'] = 'http://projet-ir8.esaip.org/Team2/Website/';
 
 /*
 |--------------------------------------------------------------------------

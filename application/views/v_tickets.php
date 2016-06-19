@@ -15,21 +15,27 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         d'acheter deux ticket d'un jour) ou prendre la formule Full, 3 en 1, Méga
         Giga, Tera, Supra Festival pour les trois jours consécutifs.
         </p>
-        <fieldset id="acheter_tickets">
-            <legend>Acheter un Ticket</legend>
-            <label for="nom">Nom : </label>
-            <input type="text" name="nom" id="nom"/><br/>
-            <label for="prenom">Prénom : </label>
-            <input type="text" name="prenom" id="prenom"/><br/>
-            <label for="date">Choisissez les dates de votre festival : </label>
-            <select name="date" id="date_1">
-                <option value="date_1">Le date 1</option>
-                <option value="date_2">Le date 2</option>
-                <option value="date_3">Le date 3</option>
-                <option value="date_4">3 jours, du au</option>
-            </select>
-        </fieldset>
-        <input type="submit" value="Valider" onclick="return valider()"></input>
+
+        <form method="post" action="<?php echo($url_base.'Inscription_Ticket/valider_ticket')?>">
+            <fieldset id="acheter_tickets">
+                <legend>Acheter un Ticket</legend>
+                <label for="nom">Nom : </label>
+                <input type="text" name="nom" id="nom"/ required>
+                <br/>
+                <label for="prenom">Prénom : </label>
+                <input type="text" name="prenom" id="prenom"/ required >
+                <br/>
+                <label for="date">Choisissez les dates de votre festival : </label>
+                <br />
+                <select name="date" id="date_1" >
+                    <option value="date_1">Jour 1</option>
+                    <option value="date_2">Jour 2</option>
+                    <option value="date_3">Jour 3</option>
+                    <option value="date_4">3 jours</option>
+                </select>
+                <input type="submit" value="Valider" />
+            </fieldset>
+        </form>
     </div>
 </section>
     

@@ -16,6 +16,7 @@ function redirection()
       url_f=url_f+(url[i]);
       url_f=url_f+('/');
   }
+  url_f=url_f+('/inscription_Ticket/ticket');
   document.location.href=url_f; 
 
 }

@@ -15,7 +15,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					?>
 					<br />
 					<br />
-					<a href="<?php echo($url_base.'parametre/c1')?>">Retourner à la page : paramètre</a>
+					<a href="<?php echo($url_base.'inscription/ticket')?>">Retourner à la page : Tickets</a>
 					<br />
 
 				</section>

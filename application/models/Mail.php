@@ -12,7 +12,7 @@ Class Mail extends CI_Model
   function mail_id($id)
   {
 
-      $requete = "select mail from utilisateur WHERE idUser='".$this->db->escape($id).";";
+      $requete = "select mail from utilisateur WHERE idUser=".$this->db->escape($id).";";
       $result = $this->db->query($requete);
       return $result->result();
 
@@ -21,7 +21,7 @@ Class Mail extends CI_Model
 
   function verif_mail($mail)
   {
-      $requete = "select actif from utilisateur WHERE mail='".$this->db->escape($mail).";";
+      $requete = "select actif from utilisateur WHERE mail=".$this->db->escape($mail).";";
       $result = $this->db->query($requete);
 
       if($result -> num_rows() == 1)
