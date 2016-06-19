@@ -4,15 +4,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * 
  * @author Adrien PIRONNEAU
  * @source Antoine GUILLOT
- * @date 18/06/2016
- * @rev 01
+ * @date 19/06/2016
+ * @rev 02
  */
 
 class Contact extends CI_Controller
 {      
         public function formulaire()
         {
-            $sess_array=$this->session->userdata('logged_in');
             $data = array();
             
             $this->load->model('login');
@@ -23,5 +22,42 @@ class Contact extends CI_Controller
 	        $this->load->view('v_contact', $data);
 	        $this->load->view('v_footer');
             
+        }
+    
+    
+          //v 
+        function sendform()
+        {
+
+
+            $pseudo_contact = htmlspecialchars($_POST['pseudo_contact']);
+            $mail_contact = htmlspecialchars($_POST['mail_contact']);
+            $titre_contact = htmlspecialchars($_POST['titre_contact']);
+            $texte_contact = htmlspecialchars($_POST['texte_contact']);
+    
+            try
+            {
+                // Initilisation PDO
+                $bdd = new PDO('mysql:host=localhost;dbname=test3', 'root', '');
+            }
+ 
+            catch (Exception $e)
+            {
+                // En cas d'erreur : message puis exit
+                die('Erreur : ' . $e->getMessage());
+            }
+    
+            
+            //Requete SQL
+            $req = $PDO->prepare("INSERT INTO `contact` (`pseudo_contact`, `mail_contact`, `titre_contact`, `texte_contact`) VALUES (:pseudo_contact, :mail_contact, :titre_contact, :texte_contact)");
+            $req->execute(array(
+            ':pseudo_contact' => $pseudo_contact, 
+            ':mail_contact' => $mail_contact,
+            ':titre_contact' => $titre_contact,
+            ':texte_contact' => $texte_contact
+            ));
+            
+            echo($pseudo_contact);
+  
         }
 }
