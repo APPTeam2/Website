@@ -156,4 +156,17 @@ class Inscription_Ticket extends CI_Controller
         }
 
     }
+
+    public function contact()
+    {
+        $message1 = htmlspecialchars($_POST['texte_contact']);
+        $email = htmlspecialchars($_POST['mail_contact']);
+
+        $this->load->model('envoyer_mail');
+        $subject="Formulaire de contact";
+        $mail='finlandblogproject@gmail.com';
+        $message="De : ".$email." Message : ".$message1;
+        $this->envoyer_mail->envoyer($mail, $subject, $message); 
+
+    }
 }

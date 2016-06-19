@@ -24,7 +24,7 @@ class Contact extends CI_Controller
             
         }
     
-    
+/*
         function sendMail() 
         {
             $config = Array
@@ -62,5 +62,5 @@ class Contact extends CI_Controller
                 redirect('accueil/message', 'refresh'); 
             }
       
-        }
+        }*/
 }
