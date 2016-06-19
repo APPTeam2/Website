@@ -243,6 +243,10 @@ class Accueil extends CI_Controller {
             {
                 $data['code_erreur']="Il semblerait que vous ne soyez pas connecté :( <br />";
             }
+            elseif ($code_erreur==8)
+            {
+                $data['code_erreur']="Il semblerait que vvotre compte ne soit pas activé :( <br />";
+            }
             else
             {
                 $data['code_erreur']="Erreur inconnue :'( <br />Veuiller contacter un administrateur.";

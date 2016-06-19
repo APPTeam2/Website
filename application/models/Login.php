@@ -77,7 +77,7 @@ Class Login extends CI_Model {
     {
         $sess_array=$this->session->userdata('logged_in');
         $data = array();
-        if($sess_array['id']!=NULL)
+        if($sess_array['id']!=NULL and $sess_array['actif']==1)
             {
                 return($sess_array['username']);
             }
