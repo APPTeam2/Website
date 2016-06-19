@@ -19,7 +19,20 @@ class Inscription_Ticket extends CI_Controller
         }
         else
         {
-            redirect('Inscription/afficherFormulaire', 'refresh');
+            $sess_array=$this->session->userdata('logged_in');
+            if($sess_array['actif']==0)
+            {
+                $data=array();
+                $data['code']=8;            
+                $this->session->set_flashdata('code', $data);
+                redirect('accueil/message', 'refresh');
+            }
+            else
+            {
+                redirect('Inscription/afficherFormulaire', 'refresh');
+            }
+
+            
             //redirect('Tickets/c_tickets', 'refresh');
         }       
     }
