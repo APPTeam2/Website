@@ -141,13 +141,13 @@ h1
 
 #v_progra article
 {
-    margin: 0%;
+    margin: 2% 0% 0% 0%;
     padding: 0%;
 }
 
 #v_fest div
 {
-    margin: 0%;
+    margin: 2% 0% 0% 0%;
     padding: 0%;
 }
 
@@ -219,7 +219,7 @@ a, a:active
     /* Fin Formulaire inscription Antoine RICHARD */
 
 
-@media screen and (min-width: 1025px)
+@media screen and (min-width: 1029px)
 {
     body
     {
@@ -579,7 +579,7 @@ a, a:active
         div#tickets fieldset#acheter_tickets label
         {
             font-size: 100%;
-            color: white;
+            color: white; 
             text-align: center;
             font-style: normal;
             font-family: Calibri;
@@ -589,7 +589,7 @@ a, a:active
         div#tickets fieldset#acheter_tickets input
         {
             font-size: 100%;
-            color: white;
+            color: black; /*Le prochain qui colle le texte des champs en blanc je le fusille, cordialement, la Direction*/
             text-align: center;
             font-style: normal;
             font-family: Calibri;
@@ -649,7 +649,7 @@ a, a:active
  * @version 1
  */
 
-@media screen and (max-width: 1024px)
+@media screen and (max-width: 1028px)
 {
         body
     {
@@ -943,7 +943,7 @@ figure#sponsors
         div#tickets fieldset#acheter_tickets input
         {
             font-size: 100%;
-            color: white;
+            color: black; /*Le prochain qui colle le texte des champs en blanc je le fusille, cordialement, la Direction*/
             text-align: center;
             font-style: normal;
             font-family: Calibri;
@@ -1126,7 +1126,7 @@ footer
     padding-left: 5%;
 }
 
-@media screen and (max-width: 1025px)
+@media screen and (max-width: 1029px)
 {
     .footer-container
     {
@@ -1156,7 +1156,7 @@ section article
     font-family: 'Segoe UI', 'Segoe WP', Tahoma, Arial, sans-serif;
 }
 
-@media screen and (max-width: 1025px)
+@media screen and (max-width: 1029px)
 {
         section article
     {
@@ -1196,7 +1196,7 @@ section article
     background: none!important; 
 }
    
-@media screen and (max-width: 1025px)
+@media screen and (max-width: 1029px)
 {
     .gmaps
     {
@@ -1332,7 +1332,7 @@ section article
 }
 
 
-@media screen and (max-width: 1025px)
+@media screen and (max-width: 1029px)
 {
     .contact
     {

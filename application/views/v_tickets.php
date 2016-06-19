@@ -19,14 +19,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         lors de votre inscription.
         </p>
 
-        <form method="post" action="<?php echo($url_base.'Inscription_Ticket/valider_ticket')?>">
+        <form id="tickets2" method="post" action="<?php echo($url_base.'Inscription_Ticket/valider_ticket')?>">
             <fieldset id="acheter_tickets">
                 <legend>Acheter un Ticket</legend>
                 <label for="nom">Nom : </label>
-                <input type="text" name="nom" id="nom"/ required>
+                <input type="text" name="nom" id="nom" class="champ"/ required>
                 <br/>
                 <label for="prenom">Prénom : </label>
-                <input type="text" name="prenom" id="prenom"/ required >
+                <input type="text" name="prenom" id="prenom" class="champ"/ required >
                 <br/>
                 <label for="date">Choisissez les dates de votre festival : </label>
                 <br />
