@@ -12,7 +12,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <script language="JavaScript" type="text/javascript" src=<?php echo($url_base . '/assets/javascript/jquery.js') ?>></script>
     <div id="form">
         <h1>Inscription</h1>
-        <form method="post" action="<?php echo($url_base . 'Inscription/validationcreerPersonne') ?>" name="CreateUser">
+        <!--<form method="post" action="<?php echo($url_base . 'Inscription/validationcreerPersonne') ?>" name="CreateUser">-->
+        <form method="post" action="<?php echo($url_base . 'Inscription_temp/envoyer') ?>" name="CreateUser">
             <fieldset id="infoForm">
                 <legend>Vos informations générales</legend>
                 <input type="hidden" readonly="readonly" name="id" id="id"></input>
