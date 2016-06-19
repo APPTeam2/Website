@@ -24,32 +24,42 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <li>
                 <?php echo anchor($uri = $url_base."Historique/c1#contact", $title = 'Equipes / Contact')?>
             </li>
-            <li>Sponsors</li>
+            <li>
+                <?php echo anchor($uri = $url_base."Historique/c1#slider_sponsors", $title = 'Sponsors')?>
+            </li>
         </div>
     </div>
     <div class="footer-item">
         <div class="footer-title">Programmation</div>
         <div class="footer-body">
             <li>
-                <a href="" >Animations</a>
+                <?php echo anchor($uri = $url_base."Programmation/c_prog#animations", $title = 'Animations')?>
             </li>
-            <li>Stands</li>
-            <li>Concerts</li>
+            <li>
+                <?php echo anchor($uri = $url_base."Programmation/c_prog#stands", $title = 'Stands')?>
+            </li>
+            <li>
+                <?php echo anchor($uri = $url_base."Programmation/c_prog#concerts", $title = 'Concerts')?>
+            </li>
         </div>
     </div>
     <div class="footer-item">
         <div class="footer-title">Infos Pratiques</div>
         <div class="footer-body">
-            <li>Camping</li>
+            <li>
+                <?php echo anchor($uri = $url_base."Infos/access", $title = 'Camping')?>
+            </li>
             <li>
                 <?php echo anchor($uri = $url_base."Infos/access", $title = 'Accessibilité')?>
             </li>
-            <li>Venir au Fest'Esaip</li>
+            <li>
+                <?php echo anchor($uri = $url_base."Infos/come", $title = 'Venir au Fest\'Esaip')?>
+            </li>
         </div>
     </div>
     <div class="footer-item ">
         <div class="footer-item-text">
-            L'interface a été réalisée et développée par <b>Team2</b> (Adrien P, Antoine G, Antoine R, Florian L, Nathan H) pour <b>Fest'Esaip</b>. Toute reproduction complète ou partielle est strictement interdite.<br><br>
+            L'interface a été réalisée et développée par <b><a href="https://github.com/APPTeam2/" target="_blank">Team2</a></b> (Adrien P, Antoine G, Antoine R, Florian L, Nathan H) pour <b>Fest'Esaip</b>. Toute reproduction complète ou partielle est strictement interdite.<br><br>
         </div>
         <div class="footer-item-credits">
             <div id="footer-contact">
