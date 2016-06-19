@@ -15,7 +15,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<link rel="stylesheet" href="<?php echo($url_base.'/assets/css/style_header.css')?>"/>
+		<link rel="stylesheet" href="<?php echo($url_base.'/assets/css/style.css')?>"/>
 		<title>Fest'Eaip</title>
 	</head>
 

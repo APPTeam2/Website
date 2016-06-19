@@ -20,7 +20,7 @@ class Inscription_Ticket extends CI_Controller
         else
         {
             $sess_array=$this->session->userdata('logged_in');
-            if($sess_array['actif']==0)
+            if($sess_array['actif']==0 and $sess_array['id']!=0)
             {
                 $data=array();
                 $data['code']=8;            
@@ -154,6 +154,21 @@ class Inscription_Ticket extends CI_Controller
             $this->session->set_flashdata('code', $data);
             redirect('accueil/message', 'refresh');
         }
+
+    }
+
+    public function contact()
+    {
+        $message1 = htmlspecialchars($_POST['texte_contact']);
+        $email = htmlspecialchars($_POST['mail_contact']);
+
+        $this->load->model('envoyer_mail');
+        $subject="Formulaire de contact";
+        $mail='finlandblogproject@gmail.com';
+        $message="De : ".$email." Message : ".$message1;
+        $this->envoyer_mail->envoyer($mail, $subject, $message); 
+
+        redirect('', 'refresh');
 
     }
 }

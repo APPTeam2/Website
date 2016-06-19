@@ -12,7 +12,6 @@ class Infos extends CI_Controller
 {      
         public function camping()
         {
-            $sess_array=$this->session->userdata('logged_in');
             $data = array();
             
             $this->load->model('login');
@@ -27,7 +26,6 @@ class Infos extends CI_Controller
     
         public function access()
         {
-            $sess_array=$this->session->userdata('logged_in');
             $data = array();
             
             $this->load->model('login');
@@ -42,7 +40,6 @@ class Infos extends CI_Controller
     
             public function come()
         {
-            $sess_array=$this->session->userdata('logged_in');
             $data = array();
             
             $this->load->model('login');

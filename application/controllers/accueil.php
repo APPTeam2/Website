@@ -245,7 +245,15 @@ class Accueil extends CI_Controller {
             }
             elseif ($code_erreur==8)
             {
-                $data['code_erreur']="Il semblerait que vvotre compte ne soit pas activé :( <br />";
+                $data['code_erreur']="Il semblerait que votre compte ne soit pas activé :( <br />";
+            }
+            elseif ($code_erreur==9)
+            {
+                $data['code_erreur']="Il semblerait que le formulaire ne soit pas correctement complété :( <br />";
+            }
+            elseif ($code_erreur==10)
+            {
+                $data['code_erreur']="Il ne vous reste plus qu'à vous connecter et confirmer votre adresse mail :) <br />";
             }
             else
             {
