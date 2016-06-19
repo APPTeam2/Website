@@ -132,6 +132,23 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
   UNIQUE KEY `mail` (`mail`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+
+-- --------------------------------------------------------
+
+-- ----------------------------
+-- Table structure for contact
+-- ----------------------------
+DROP TABLE IF EXISTS `contact`;
+CREATE TABLE `contact` (
+  `pseudo_contact` varchar(255) DEFAULT NULL,
+  `mail_contact` varchar(255) DEFAULT NULL,
+  `titre_contact` varchar(255) DEFAULT NULL,
+  `texte_contact` varchar(255) DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+
+-- --------------------------------------------------------
+
 --
 -- Contraintes pour les tables exportées
 --
