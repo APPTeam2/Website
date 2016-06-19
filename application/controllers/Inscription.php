@@ -3,8 +3,8 @@
 /** Controleur de la page Inscription
  * 
  * @author Antoine RICHARD
- * @date 07/06/2016
- * @version 0.4
+ * @date 19/06/2016
+ * @version 1
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
 

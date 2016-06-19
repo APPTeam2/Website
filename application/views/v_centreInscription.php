@@ -2,8 +2,8 @@
 /** Centre de la page pour l'inscription d'un utilisateur
  * 
  * @author Antoine RICHARD
- * @date 16/06/2016
- * @version 0.4
+ * @date 19/06/2016
+ * @version 1
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
@@ -35,8 +35,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <input type="text" name="login" id="login" placeholder="Entrez un login " required></input><br/>
                 <label for="mdp">Mot de passe :</label>
                 <input type="password" name="mdp" id="mdp" oncopy="return false;" oncut="return false;" placeholder="Entrez mot de passe " required></input><br/>
-                <label for="mdp2">Retaper le mot de passe :</label>  <!-- vérification de mots de passe -->
-                <input type="password" name="mdp2" id="mdp2" oncopy="return false;" oncut="return false;" placeholder="Entrez le à nouveau " required></input><br/>
             </fieldset>
 
             <input type="submit" value="Valider"></input>

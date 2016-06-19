@@ -2,8 +2,8 @@
 /** Centre de la page pour l'inscription d'un utilisateur
  * 
  * @author Antoine RICHARD
- * @date 16/06/2016
- * @version 0.4
+ * @date 19/06/2016
+ * @version 1
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
 
@@ -19,7 +19,7 @@ $login = $_POST['login'];
 ?>
 <section>
     <div id="form">
-        <h1>L'utilisateur a bien été créée</h1>
+        <h1>L'utilisateur a bien été créé</h1>
 
         <fieldset id='infoForm'>
             <legend>Ses informations</legend>
@@ -39,7 +39,6 @@ $login = $_POST['login'];
             <input type="text" readonly="readonly" name="login" id="login" value="<?php echo $login ?>"></input><br/>
         </fieldset>
 
-        <input type="button" value="Retour à la page de création d'un utlisateur" onclick="gotoUrl('.?controleur=AdminPersonnes&action=creerPersonne')">
-
+        <input type="button" value="Retour à la page d'Accueil" onclick="window.location.href = '<?php echo($url_base) ?>';">
     </div>
 </section>

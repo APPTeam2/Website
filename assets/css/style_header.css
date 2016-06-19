@@ -153,8 +153,19 @@ a, a:active
         border-radius: 4px;
         box-sizing: border-box;
     }
+    
+    fieldset#infoForm input[readonly] {
+        width: 60%;
+        padding: 1% 3%;
+        margin: 1% 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        background-color: grey;
+    }
 
-    div#form form input[type=submit]{
+    div#form form input[type=submit], input[type=button] {
         width: auto;
         background-color: #4CAF50;
         color: white;
@@ -166,7 +177,7 @@ a, a:active
         display: block;
     }
 
-    div#form form input[type=submit]:hover{
+    div#form form input[type=submit]:hover, input[type=button] {
         background-color: #45a049;
     }
     /* Fin Formulaire inscription Antoine RICHARD */
