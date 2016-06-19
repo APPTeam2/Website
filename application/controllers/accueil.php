@@ -255,6 +255,10 @@ class Accueil extends CI_Controller {
             {
                 $data['code_erreur']="Il ne vous reste plus qu'à vous connecter et confirmer votre adresse mail :) <br />";
             }
+            elseif ($code_erreur==11)
+            {
+                $data['code_erreur']="Ce login ou cette adresse mail est déjà utilisé :( <br />";
+            }
             else
             {
                 $data['code_erreur']="Erreur inconnue :'( <br />Veuiller contacter un administrateur.";
