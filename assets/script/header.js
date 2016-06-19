@@ -12,7 +12,7 @@ function formulaire() {
     $formulaire_login.show();
 
 
-    $login=$('#menu>li>ol');
+    $login=$('ol');
 
     $login.hide();
 

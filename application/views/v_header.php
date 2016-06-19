@@ -90,4 +90,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <script src="http://code.jquery.com/jquery-3.0.0.js"   integrity="sha256-jrPLZ+8vDxt2FnE1zvZXCkCcebI/C8Dt5xyaQBjxQIo="   crossorigin="anonymous"></script>
 <script src="<?php echo($url_base.'/assets/script/header.js')?>"></script>
+
+
 <script src="<?php echo($url_base.'/assets/script/Ancien_nav.js')?>"></script>

@@ -9,7 +9,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 
 
-<section>
+<section id="v_fest">
     <div class="FestEsaip">
         <h3 id="historique" class="droit">Historique</h3>
         <p class="anonce"> Retrouvez la liste de nos précédents événements et les artistes qui y étaient présents.</p>
@@ -111,4 +111,3 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </ul> 
         <p class="espace">Nous contacter : <a href="mailto:FestESAIP.contact@esaip.org"><br />FestESAIP.contact@esaip.org</a> <br /> <?php echo anchor($uri = $url_base."Contact/formulaire#", $title = 'Formulaire en ligne')?></p>
     </div>
-</section>

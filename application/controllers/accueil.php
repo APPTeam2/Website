@@ -239,6 +239,10 @@ class Accueil extends CI_Controller {
             {
                 $data['code_erreur']="Login ou mdp incorrect :( <br />";
             }
+            elseif ($code_erreur==7)
+            {
+                $data['code_erreur']="Il semblerait que vous ne soyez pas connecté :( <br />";
+            }
             else
             {
                 $data['code_erreur']="Erreur inconnue :'( <br />Veuiller contacter un administrateur.";

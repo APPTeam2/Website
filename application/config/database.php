@@ -74,12 +74,12 @@ $active_group = 'default';
 $query_builder = TRUE;
 
 $db['default'] = array(
-	'dsn'   => 'mysql:host=localhost;dbname=festesaip',
+	'dsn'   => 'mysql:host=localhost;dbname=fest3',
 	//'hostname' => 'localhost',
 	'hostname' => 'mysql:host=localhost',
 	'username' => 'root',
 	'password' => '',
-	'database' => 'test',
+	'database' => 'fest3',
 	'dbdriver' => 'pdo',
 	'dbprefix' => '',
 	'pconnect' => TRUE,
